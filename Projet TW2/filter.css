@@ -1,0 +1,46 @@
+#info{
+    position: absolute;
+    left: 260px;
+    top: 145px;
+    font-family: Verdana, Arial;
+    font-size: 13px;
+    
+}
+
+fieldset{
+    margin-left: 20px;
+    margin-bottom:12px;
+    height: auto;
+    width:555px;
+    background-color: #fff4df;
+}
+
+button{
+    margin-left: 20px;
+}
+
+legend{
+    background-color: white;
+    color: #0083ff;
+    text-decoration:underline;
+    font-family:initial;
+	font-size: 25pt;
+	background-color:#fff4df;
+	border: ridge 2px;
+}
+
+html{
+    
+	background-image: url("fond3.png");
+	background-size: 100%;
+}
+
+form{
+	position: absolute;
+    left: 40px;
+    top: 45px;
+    bottom: 235px;
+    right: 1250px;
+	border: solid 3px;
+	border-color:#0083ff;
+}

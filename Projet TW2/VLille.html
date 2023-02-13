@@ -1,0 +1,1605 @@
+<!DOCTYPE html>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+    <head>
+        <title>Projet V'Lille</title>
+        <meta charset='UTF-8' />
+        <link rel='stylesheet' href='projet.css' />
+        <link rel='stylesheet' href='https://unpkg.com/leaflet@1.0.3/dist/leaflet.css' />
+		<script src='https://unpkg.com/leaflet@1.0.3/dist/leaflet.js'></script>
+		<script src='scriptCarteVLille.js'></script>
+    </head>
+
+    <body>
+    
+    
+    <header>
+        <p id='entete'>
+            <a href='test.php'>Accueil</a>   <a href='formFilter.php'>Filtre</a>
+        </p>
+    </header>
+    <nav id='tableauVLille'>		<table id=tableJSON>
+					<thead>
+						<tr>
+							
+							<th>NameStation</th>
+							<th>Commune</th>
+							<th>Vélo disponibles</th>
+							<th>Place disponibles</th>
+						</tr>
+
+					<tbody>
+						<tr  data-lat='50.63589' data-lon='3.062471' data-nameStation="Rihour" data-etat='EN SERVICE' data-connexion='CONNECTEE' data-commune="LILLE" data-adresse="ANGLE PLACE RIHOUR RUE JEAN ROISIN" data-typeCB='AVEC TPE' data-velodispo='21' data-espace='11' data-libelle='10' >
+							<td>Rihour</td>
+							<td>LILLE</td>
+							<td>21</td>
+							<td>11</td>
+						</tr>
+
+						<tr  data-lat='50.64584' data-lon='3.112744' data-nameStation="Mendes France" data-etat='EN SERVICE' data-connexion='CONNECTEE' data-commune="MONS EN BAROEUL" data-adresse="BD NAPOLEON 1ER" data-typeCB='SANS TPE' data-velodispo='6' data-espace='12' data-libelle='104' >
+							<td>Mendes France</td>
+							<td>MONS EN BAROEUL</td>
+							<td>6</td>
+							<td>12</td>
+						</tr>
+
+						<tr  data-lat='50.651337' data-lon='3.08945' data-nameStation="Avenue de Mormal" data-etat='EN SERVICE' data-connexion='CONNECTEE' data-commune="LILLE" data-adresse="16, RUE DU BUISSON" data-typeCB='SANS TPE' data-velodispo='8' data-espace='10' data-libelle='113' >
+							<td>Avenue de Mormal</td>
+							<td>LILLE</td>
+							<td>8</td>
+							<td>10</td>
+						</tr>
+
+						<tr  data-lat='50.64891' data-lon='3.078336' data-nameStation="Botanique" data-etat='EN SERVICE' data-connexion='CONNECTEE' data-commune="LA MADELEINE" data-adresse="185, AVENUE DE LA RÉPUBLIQUE" data-typeCB='SANS TPE' data-velodispo='11' data-espace='5' data-libelle='116' >
+							<td>Botanique</td>
+							<td>LA MADELEINE</td>
+							<td>11</td>
+							<td>5</td>
+						</tr>
+
+						<tr  data-lat='50.641834' data-lon='3.022364' data-nameStation="College Lavoisier" data-etat='EN SERVICE' data-connexion='CONNECTEE' data-commune="LAMBERSART" data-adresse="56, RUE PAUL VAILLANT" data-typeCB='SANS TPE' data-velodispo='15' data-espace='2' data-libelle='118' >
+							<td>College Lavoisier</td>
+							<td>LAMBERSART</td>
+							<td>15</td>
+							<td>2</td>
+						</tr>
+
+						<tr  data-lat='50.644855' data-lon='3.013238' data-nameStation="Pont superieur" data-etat='EN SERVICE' data-connexion='CONNECTEE' data-commune="LOMME" data-adresse="ANGLE DE LA RUE AUGUSTE BONTE  ET DU N°520 DE L’AVENUE DE DUNKERQUE" data-typeCB='AVEC TPE' data-velodispo='7' data-espace='9' data-libelle='121' >
+							<td>Pont superieur</td>
+							<td>LOMME</td>
+							<td>7</td>
+							<td>9</td>
+						</tr>
+
+						<tr  data-lat='50.665348' data-lon='3.075792' data-nameStation="Rue de l'Eglise" data-etat='EN SERVICE' data-connexion='CONNECTEE' data-commune="MARCQ EN BAROEUL" data-adresse="71, RUE NATIONALE" data-typeCB='AVEC TPE' data-velodispo='10' data-espace='7' data-libelle='123' >
+							<td>Rue de l'Eglise</td>
+							<td>MARCQ EN BAROEUL</td>
+							<td>10</td>
+							<td>7</td>
+						</tr>
+
+						<tr  data-lat='50.64057' data-lon='3.115571' data-nameStation="Le Polyedre" data-etat='EN SERVICE' data-connexion='CONNECTEE' data-commune="MONS EN BAROEUL" data-adresse="FACE AU 38, AVENUE RHIN ET DANUBE" data-typeCB='SANS TPE' data-velodispo='10' data-espace='6' data-libelle='126' >
+							<td>Le Polyedre</td>
+							<td>MONS EN BAROEUL</td>
+							<td>10</td>
+							<td>6</td>
+						</tr>
+
+						<tr  data-lat='50.61606' data-lon='3.132006' data-nameStation="Centre Commercial V2" data-etat='EN SERVICE' data-connexion='CONNECTEE' data-commune="VILLENEUVE D'ASCQ" data-adresse="BOULEVARD VALMY" data-typeCB='AVEC TPE' data-velodispo='13' data-espace='6' data-libelle='132' >
+							<td>Centre Commercial V2</td>
+							<td>VILLENEUVE D'ASCQ</td>
+							<td>13</td>
+							<td>6</td>
+						</tr>
+
+						<tr  data-lat='50.655098' data-lon='3.051201' data-nameStation="Bailly" data-etat='EN SERVICE' data-connexion='CONNECTEE' data-commune="SAINT ANDRE LEZ LILLE" data-adresse="FACE AU 4 RUE GAMBETTA" data-typeCB='SANS TPE' data-velodispo='12' data-espace='3' data-libelle='155' >
+							<td>Bailly</td>
+							<td>SAINT ANDRE LEZ LILLE</td>
+							<td>12</td>
+							<td>3</td>
+						</tr>
+
+						<tr  data-lat='50.673943' data-lon='3.163443' data-nameStation="Edhec" data-etat='EN SERVICE' data-connexion='CONNECTEE' data-commune="CROIX" data-adresse="272, RUE VERTE" data-typeCB='SANS TPE' data-velodispo='13' data-espace='17' data-libelle='201' >
+							<td>Edhec</td>
+							<td>CROIX</td>
+							<td>13</td>
+							<td>17</td>
+						</tr>
+
+						<tr  data-lat='50.688015' data-lon='3.174815' data-nameStation="Alfred Mongy" data-etat='EN SERVICE' data-connexion='CONNECTEE' data-commune="ROUBAIX" data-adresse="15, BOULEVARD DU GÉNÉRAL DE GAULLE" data-typeCB='SANS TPE' data-velodispo='11' data-espace='13' data-libelle='206' >
+							<td>Alfred Mongy</td>
+							<td>ROUBAIX</td>
+							<td>11</td>
+							<td>13</td>
+						</tr>
+
+						<tr  data-lat='50.64193' data-lon='3.061774' data-nameStation="Place du Concert" data-etat='EN SERVICE' data-connexion='CONNECTEE' data-commune="LILLE" data-adresse="RUE ALPHONSE COLAS" data-typeCB='AVEC TPE' data-velodispo='9' data-espace='11' data-libelle='21' >
+							<td>Place du Concert</td>
+							<td>LILLE</td>
+							<td>9</td>
+							<td>11</td>
+						</tr>
+
+						<tr  data-lat='50.68859' data-lon='3.182028' data-nameStation="Lannoy" data-etat='EN SERVICE' data-connexion='CONNECTEE' data-commune="ROUBAIX" data-adresse="93, RUE DE LANNOY" data-typeCB='SANS TPE' data-velodispo='4' data-espace='14' data-libelle='213' >
+							<td>Lannoy</td>
+							<td>ROUBAIX</td>
+							<td>4</td>
+							<td>14</td>
+						</tr>
+
+						<tr  data-lat='50.6795' data-lon='3.179257' data-nameStation="Saint Jean-Baptiste" data-etat='EN SERVICE' data-connexion='CONNECTEE' data-commune="ROUBAIX" data-adresse="1, RUE LESUEUR" data-typeCB='AVEC TPE' data-velodispo='7' data-espace='5' data-libelle='214' >
+							<td>Saint Jean-Baptiste</td>
+							<td>ROUBAIX</td>
+							<td>7</td>
+							<td>5</td>
+						</tr>
+
+						<tr  data-lat='50.681797' data-lon='3.194122' data-nameStation="Fraternite" data-etat='EN SERVICE' data-connexion='CONNECTEE' data-commune="ROUBAIX" data-adresse="PLACE DE LA FRATERNITÉ" data-typeCB='AVEC TPE' data-velodispo='12' data-espace='4' data-libelle='216' >
+							<td>Fraternite</td>
+							<td>ROUBAIX</td>
+							<td>12</td>
+							<td>4</td>
+						</tr>
+
+						<tr  data-lat='50.64124' data-lon='3.064987' data-nameStation="Louise de Bettignies" data-etat='EN SERVICE' data-connexion='CONNECTEE' data-commune="LILLE" data-adresse="PLACE LOUISE DE BETTIGNIES" data-typeCB='AVEC TPE' data-velodispo='16' data-espace='14' data-libelle='22' >
+							<td>Louise de Bettignies</td>
+							<td>LILLE</td>
+							<td>16</td>
+							<td>14</td>
+						</tr>
+
+						<tr  data-lat='50.6941' data-lon='3.172165' data-nameStation="Les Gobelins" data-etat='EN SERVICE' data-connexion='CONNECTEE' data-commune="ROUBAIX" data-adresse="32, RUE DE LA COMMUNAUTÉ URBAINE" data-typeCB='SANS TPE' data-velodispo='4' data-espace='8' data-libelle='222' >
+							<td>Les Gobelins</td>
+							<td>ROUBAIX</td>
+							<td>4</td>
+							<td>8</td>
+						</tr>
+
+						<tr  data-lat='50.683987' data-lon='3.16327' data-nameStation="Epeule Montesquieu" data-etat='EN SERVICE' data-connexion='CONNECTEE' data-commune="ROUBAIX" data-adresse="RUE INKERMAN" data-typeCB='SANS TPE' data-velodispo='10' data-espace='6' data-libelle='225' >
+							<td>Epeule Montesquieu</td>
+							<td>ROUBAIX</td>
+							<td>10</td>
+							<td>6</td>
+						</tr>
+
+						<tr  data-lat='50.699436' data-lon='3.159658' data-nameStation="Bvrd Armentieres" data-etat='EN SERVICE' data-connexion='CONNECTEE' data-commune="ROUBAIX" data-adresse="1, BOULEVARD D'ARMENTIÈRES" data-typeCB='SANS TPE' data-velodispo='5' data-espace='13' data-libelle='227' >
+							<td>Bvrd Armentieres</td>
+							<td>ROUBAIX</td>
+							<td>5</td>
+							<td>13</td>
+						</tr>
+
+						<tr  data-lat='50.639107' data-lon='3.065548' data-nameStation="Rue des Arts" data-etat='EN SERVICE' data-connexion='CONNECTEE' data-commune="LILLE" data-adresse="41 RUE DES ARTS" data-typeCB='SANS TPE' data-velodispo='7' data-espace='11' data-libelle='23' >
+							<td>Rue des Arts</td>
+							<td>LILLE</td>
+							<td>7</td>
+							<td>11</td>
+						</tr>
+
+						<tr  data-lat='50.7004' data-lon='3.161378' data-nameStation="Alsace" data-etat='EN SERVICE' data-connexion='CONNECTEE' data-commune="ROUBAIX" data-adresse="89, BOULEVARD D'ARMENTIÈRES" data-typeCB='AVEC TPE' data-velodispo='8' data-espace='8' data-libelle='234' >
+							<td>Alsace</td>
+							<td>ROUBAIX</td>
+							<td>8</td>
+							<td>8</td>
+						</tr>
+
+						<tr  data-lat='50.72075' data-lon='3.152659' data-nameStation="Theatre Tourcoing" data-etat='EN SERVICE' data-connexion='CONNECTEE' data-commune="TOURCOING" data-adresse="1, RUE DE L'ALMA" data-typeCB='AVEC TPE' data-velodispo='7' data-espace='10' data-libelle='238' >
+							<td>Theatre Tourcoing</td>
+							<td>TOURCOING</td>
+							<td>7</td>
+							<td>10</td>
+						</tr>
+
+						<tr  data-lat='50.718204' data-lon='3.15749' data-nameStation="Victoire" data-etat='EN SERVICE' data-connexion='CONNECTEE' data-commune="TOURCOING" data-adresse="FACE AU 1 PLACE DE LA VICTOIRE" data-typeCB='SANS TPE' data-velodispo='5' data-espace='7' data-libelle='243' >
+							<td>Victoire</td>
+							<td>TOURCOING</td>
+							<td>5</td>
+							<td>7</td>
+						</tr>
+
+						<tr  data-lat='50.724686' data-lon='3.165703' data-nameStation="Jardin Botanique" data-etat='EN SERVICE' data-connexion='CONNECTEE' data-commune="TOURCOING" data-adresse="126, RUE VERTE" data-typeCB='AVEC TPE' data-velodispo='4' data-espace='14' data-libelle='245' >
+							<td>Jardin Botanique</td>
+							<td>TOURCOING</td>
+							<td>4</td>
+							<td>14</td>
+						</tr>
+
+						<tr  data-lat='50.72271' data-lon='3.163794' data-nameStation="Cavell" data-etat='EN SERVICE' data-connexion='CONNECTEE' data-commune="TOURCOING" data-adresse="FACE AU 49 RUE DE LA CLOCHE" data-typeCB='SANS TPE' data-velodispo='6' data-espace='6' data-libelle='246' >
+							<td>Cavell</td>
+							<td>TOURCOING</td>
+							<td>6</td>
+							<td>6</td>
+						</tr>
+
+						<tr  data-lat='50.728798' data-lon='3.158835' data-nameStation="Rue Saint Blaise" data-etat='EN SERVICE' data-connexion='CONNECTEE' data-commune="TOURCOING" data-adresse="85, RUE DE GAND" data-typeCB='AVEC TPE' data-velodispo='4' data-espace='8' data-libelle='248' >
+							<td>Rue Saint Blaise</td>
+							<td>TOURCOING</td>
+							<td>4</td>
+							<td>8</td>
+						</tr>
+
+						<tr  data-lat='50.728798' data-lon='3.154051' data-nameStation="Rue de Menin" data-etat='EN SERVICE' data-connexion='CONNECTEE' data-commune="TOURCOING" data-adresse="FACE AU 40 RUE JOURDAN" data-typeCB='SANS TPE' data-velodispo='3' data-espace='9' data-libelle='249' >
+							<td>Rue de Menin</td>
+							<td>TOURCOING</td>
+							<td>3</td>
+							<td>9</td>
+						</tr>
+
+						<tr  data-lat='50.63603' data-lon='3.069678' data-nameStation="Gare Lille Flandres" data-etat='EN SERVICE' data-connexion='CONNECTEE' data-commune="LILLE" data-adresse="PLACE DE LA GARE" data-typeCB='AVEC TPE' data-velodispo='10' data-espace='10' data-libelle='25' >
+							<td>Gare Lille Flandres</td>
+							<td>LILLE</td>
+							<td>10</td>
+							<td>10</td>
+						</tr>
+
+						<tr  data-lat='50.72551' data-lon='3.156554' data-nameStation="Colbert" data-etat='EN SERVICE' data-connexion='CONNECTEE' data-commune="TOURCOING" data-adresse="RUE DE GAND (FACE AU LYCÉE)" data-typeCB='SANS TPE' data-velodispo='7' data-espace='11' data-libelle='251' >
+							<td>Colbert</td>
+							<td>TOURCOING</td>
+							<td>7</td>
+							<td>11</td>
+						</tr>
+
+						<tr  data-lat='50.710735' data-lon='3.159881' data-nameStation="Carliers" data-etat='EN SERVICE' data-connexion='CONNECTEE' data-commune="TOURCOING" data-adresse="135, CHAUSSÉE GALILÉE" data-typeCB='AVEC TPE' data-velodispo='8' data-espace='4' data-libelle='258' >
+							<td>Carliers</td>
+							<td>TOURCOING</td>
+							<td>8</td>
+							<td>4</td>
+						</tr>
+
+						<tr  data-lat='50.63457' data-lon='3.068007' data-nameStation="Molinel" data-etat='EN SERVICE' data-connexion='CONNECTEE' data-commune="LILLE" data-adresse="58 RUE DU MOLINEL" data-typeCB='SANS TPE' data-velodispo='12' data-espace='10' data-libelle='26' >
+							<td>Molinel</td>
+							<td>LILLE</td>
+							<td>12</td>
+							<td>10</td>
+						</tr>
+
+						<tr  data-lat='50.69626' data-lon='3.209156' data-nameStation="Stalingrad" data-etat='EN SERVICE' data-connexion='CONNECTEE' data-commune="WATTRELOS" data-adresse="38-4 RUE DE STALINGRAD" data-typeCB='SANS TPE' data-velodispo='6' data-espace='6' data-libelle='263' >
+							<td>Stalingrad</td>
+							<td>WATTRELOS</td>
+							<td>6</td>
+							<td>6</td>
+						</tr>
+
+						<tr  data-lat='50.63413' data-lon='3.041209' data-nameStation="Place Catinat" data-etat='EN SERVICE' data-connexion='CONNECTEE' data-commune="LILLE" data-adresse="199 RUE COLBERT" data-typeCB='AVEC TPE' data-velodispo='10' data-espace='10' data-libelle='34' >
+							<td>Place Catinat</td>
+							<td>LILLE</td>
+							<td>10</td>
+							<td>10</td>
+						</tr>
+
+						<tr  data-lat='50.62224' data-lon='3.067004' data-nameStation="Rue d'Arras" data-etat='EN SERVICE' data-connexion='CONNECTEE' data-commune="LILLE" data-adresse="4 RUE WAZEMMES" data-typeCB='AVEC TPE' data-velodispo='13' data-espace='12' data-libelle='50' >
+							<td>Rue d'Arras</td>
+							<td>LILLE</td>
+							<td>13</td>
+							<td>12</td>
+						</tr>
+
+						<tr  data-lat='50.6318' data-lon='3.071392' data-nameStation="Mairie de Lille" data-etat='EN SERVICE' data-connexion='CONNECTEE' data-commune="LILLE" data-adresse="17 RUE SAINT SAUVEUR" data-typeCB='AVEC TPE' data-velodispo='0' data-espace='20' data-libelle='64' >
+							<td>Mairie de Lille</td>
+							<td>LILLE</td>
+							<td>0</td>
+							<td>20</td>
+						</tr>
+
+						<tr  data-lat='50.633728' data-lon='3.055307' data-nameStation="Place de Strasbourg" data-etat='EN SERVICE' data-connexion='CONNECTEE' data-commune="LILLE" data-adresse="7 PLACE DE STRASBOURG" data-typeCB='SANS TPE' data-velodispo='6' data-espace='10' data-libelle='7' >
+							<td>Place de Strasbourg</td>
+							<td>LILLE</td>
+							<td>6</td>
+							<td>10</td>
+						</tr>
+
+						<tr  data-lat='50.634045' data-lon='3.030778' data-nameStation="Bois Blancs" data-etat='EN SERVICE' data-connexion='CONNECTEE' data-commune="LILLE" data-adresse="122 AVENUE DE DUNKERQUE" data-typeCB='AVEC TPE' data-velodispo='3' data-espace='15' data-libelle='71' >
+							<td>Bois Blancs</td>
+							<td>LILLE</td>
+							<td>3</td>
+							<td>15</td>
+						</tr>
+
+						<tr  data-lat='50.637302' data-lon='3.024314' data-nameStation="Canteleu" data-etat='EN SERVICE' data-connexion='CONNECTEE' data-commune="LILLE" data-adresse="237 AVENUE DE DUNKERQUE" data-typeCB='SANS TPE' data-velodispo='12' data-espace='6' data-libelle='72' >
+							<td>Canteleu</td>
+							<td>LILLE</td>
+							<td>12</td>
+							<td>6</td>
+						</tr>
+
+						<tr  data-lat='50.61307' data-lon='3.047221' data-nameStation="Cimetiere du Sud" data-etat='EN SERVICE' data-connexion='CONNECTEE' data-commune="LILLE" data-adresse="65 RUE DU FAUBOURG DES POSTES" data-typeCB='AVEC TPE' data-velodispo='13' data-espace='7' data-libelle='79' >
+							<td>Cimetiere du Sud</td>
+							<td>LILLE</td>
+							<td>13</td>
+							<td>7</td>
+						</tr>
+
+						<tr  data-lat='50.63529' data-lon='3.115088' data-nameStation="Guinguette" data-etat='EN SERVICE' data-connexion='CONNECTEE' data-commune="LILLE HELLEMMES" data-adresse="RUE JACQUARD" data-typeCB='SANS TPE' data-velodispo='5' data-espace='5' data-libelle='81' >
+							<td>Guinguette</td>
+							<td>LILLE HELLEMMES</td>
+							<td>5</td>
+							<td>5</td>
+						</tr>
+
+						<tr  data-lat='50.63999' data-lon='3.075204' data-nameStation="Gare Lille Europe" data-etat='EN SERVICE' data-connexion='CONNECTEE' data-commune="LILLE" data-adresse="299 BOULEVARD DE LEEDS" data-typeCB='AVEC TPE' data-velodispo='15' data-espace='17' data-libelle='82' >
+							<td>Gare Lille Europe</td>
+							<td>LILLE</td>
+							<td>15</td>
+							<td>17</td>
+						</tr>
+
+						<tr  data-lat='50.63665' data-lon='3.091106' data-nameStation="Rue de la Gaite" data-etat='EN SERVICE' data-connexion='CONNECTEE' data-commune="LILLE" data-adresse="9 RUE MARCEAU" data-typeCB='SANS TPE' data-velodispo='10' data-espace='8' data-libelle='92' >
+							<td>Rue de la Gaite</td>
+							<td>LILLE</td>
+							<td>10</td>
+							<td>8</td>
+						</tr>
+
+						<tr  data-lat='50.63041' data-lon='3.097037' data-nameStation="Marbrerie" data-etat='EN SERVICE' data-connexion='CONNECTEE' data-commune="LILLE HELLEMMES" data-adresse="280 BIS RUE PIERRE LEGRAND" data-typeCB='AVEC TPE' data-velodispo='14' data-espace='4' data-libelle='95' >
+							<td>Marbrerie</td>
+							<td>LILLE HELLEMMES</td>
+							<td>14</td>
+							<td>4</td>
+						</tr>
+
+						<tr  data-lat='50.639828' data-lon='3.106677' data-nameStation="Lacordaire" data-etat='EN SERVICE' data-connexion='CONNECTEE' data-commune="MONS EN BAROEUL" data-adresse="44 RUE LACORDAIRE (FACE A LA PISCINE)" data-typeCB='SANS TPE' data-velodispo='6' data-espace='10' data-libelle='103' >
+							<td>Lacordaire</td>
+							<td>MONS EN BAROEUL</td>
+							<td>6</td>
+							<td>10</td>
+						</tr>
+
+						<tr  data-lat='50.638126' data-lon='3.10231' data-nameStation="Verdun" data-etat='EN SERVICE' data-connexion='CONNECTEE' data-commune="MONS EN BAROEUL" data-adresse="69 AVENUE DE VERDUN" data-typeCB='SANS TPE' data-velodispo='9' data-espace='3' data-libelle='105' >
+							<td>Verdun</td>
+							<td>MONS EN BAROEUL</td>
+							<td>9</td>
+							<td>3</td>
+						</tr>
+
+						<tr  data-lat='50.637486' data-lon='3.065902' data-nameStation="Opera" data-etat='EN SERVICE' data-connexion='CONNECTEE' data-commune="LILLE" data-adresse="FACE AU 8 RUE ANATOLE FRANCE" data-typeCB='AVEC TPE' data-velodispo='20' data-espace='5' data-libelle='12' >
+							<td>Opera</td>
+							<td>LILLE</td>
+							<td>20</td>
+							<td>5</td>
+						</tr>
+
+						<tr  data-lat='50.639366' data-lon='3.012452' data-nameStation="Lomme Mairie" data-etat='EN SERVICE' data-connexion='CONNECTEE' data-commune="LOMME" data-adresse="HÔTEL DE VILLE" data-typeCB='SANS TPE' data-velodispo='13' data-espace='5' data-libelle='120' >
+							<td>Lomme Mairie</td>
+							<td>LOMME</td>
+							<td>13</td>
+							<td>5</td>
+						</tr>
+
+						<tr  data-lat='50.6618' data-lon='3.096235' data-nameStation="Clemenceau Hippodrome" data-etat='EN SERVICE' data-connexion='CONNECTEE' data-commune="MARCQ EN BAROEUL" data-adresse="916-920 AVENUE DE LA RÉPUBLIQ" data-typeCB='SANS TPE' data-velodispo='14' data-espace='4' data-libelle='124' >
+							<td>Clemenceau Hippodrome</td>
+							<td>MARCQ EN BAROEUL</td>
+							<td>14</td>
+							<td>4</td>
+						</tr>
+
+						<tr  data-lat='50.63671' data-lon='3.054773' data-nameStation="Quai du Wault" data-etat='EN SERVICE' data-connexion='CONNECTEE' data-commune="LILLE" data-adresse="17 SQUARE DUTILLEUL" data-typeCB='AVEC TPE' data-velodispo='10' data-espace='8' data-libelle='13' >
+							<td>Quai du Wault</td>
+							<td>LILLE</td>
+							<td>10</td>
+							<td>8</td>
+						</tr>
+
+						<tr  data-lat='50.63745' data-lon='3.123145' data-nameStation="Flers Masquelier" data-etat='EN SERVICE' data-connexion='CONNECTEE' data-commune="VILLENEUVE D'ASCQ" data-adresse="97, RUE JULES GUESDE" data-typeCB='SANS TPE' data-velodispo='11' data-espace='5' data-libelle='135' >
+							<td>Flers Masquelier</td>
+							<td>VILLENEUVE D'ASCQ</td>
+							<td>11</td>
+							<td>5</td>
+						</tr>
+
+						<tr  data-lat='50.62972' data-lon='3.133873' data-nameStation="Rue Chambord" data-etat='EN SERVICE' data-connexion='CONNECTEE' data-commune="VILLENEUVE D'ASCQ" data-adresse="RUE CHAMBORD ANGLE AVENUE DE LA CHATELLENIE" data-typeCB='SANS TPE' data-velodispo='8' data-espace='10' data-libelle='136' >
+							<td>Rue Chambord</td>
+							<td>VILLENEUVE D'ASCQ</td>
+							<td>8</td>
+							<td>10</td>
+						</tr>
+
+						<tr  data-lat='50.631298' data-lon='3.126914' data-nameStation="Ladriere" data-etat='EN SERVICE' data-connexion='CONNECTEE' data-commune="VILLENEUVE D'ASCQ" data-adresse="FACE AU 53 RUE DE FIVES" data-typeCB='SANS TPE' data-velodispo='15' data-espace='5' data-libelle='138' >
+							<td>Ladriere</td>
+							<td>VILLENEUVE D'ASCQ</td>
+							<td>15</td>
+							<td>5</td>
+						</tr>
+
+						<tr  data-lat='50.62577' data-lon='3.144714' data-nameStation="Rue de Lille" data-etat='EN SERVICE' data-connexion='CONNECTEE' data-commune="VILLENEUVE D'ASCQ" data-adresse="RUE DE LILLE" data-typeCB='SANS TPE' data-velodispo='10' data-espace='6' data-libelle='139' >
+							<td>Rue de Lille</td>
+							<td>VILLENEUVE D'ASCQ</td>
+							<td>10</td>
+							<td>6</td>
+						</tr>
+
+						<tr  data-lat='50.63781' data-lon='3.052217' data-nameStation="Champ de Mars" data-etat='EN SERVICE' data-connexion='CONNECTEE' data-commune="LILLE" data-adresse="AVENUE LEON JOUHAUX (QUAI DE LA CITADELLE)" data-typeCB='AVEC TPE' data-velodispo='17' data-espace='23' data-libelle='14' >
+							<td>Champ de Mars</td>
+							<td>LILLE</td>
+							<td>17</td>
+							<td>23</td>
+						</tr>
+
+						<tr  data-lat='50.623795' data-lon='3.144815' data-nameStation="Rue Corneille" data-etat='EN SERVICE' data-connexion='CONNECTEE' data-commune="VILLENEUVE D'ASCQ" data-adresse="RUE CORNEILLE (DEVANT ÉCOLE DE MUSIQUE)" data-typeCB='SANS TPE' data-velodispo='12' data-espace='2' data-libelle='140' >
+							<td>Rue Corneille</td>
+							<td>VILLENEUVE D'ASCQ</td>
+							<td>12</td>
+							<td>2</td>
+						</tr>
+
+						<tr  data-lat='50.61058' data-lon='3.065103' data-nameStation="Chemin rouge" data-etat='EN SERVICE' data-connexion='CONNECTEE' data-commune="FACHES-THUMESNIL" data-adresse="FACE AU 2 CHEMIN ROUGE" data-typeCB='SANS TPE' data-velodispo='12' data-espace='4' data-libelle='152' >
+							<td>Chemin rouge</td>
+							<td>FACHES-THUMESNIL</td>
+							<td>12</td>
+							<td>4</td>
+						</tr>
+
+						<tr  data-lat='50.661602' data-lon='3.050322' data-nameStation="St Andre Mairie" data-etat='EN SERVICE' data-connexion='CONNECTEE' data-commune="SAINT ANDRE LEZ LILLE" data-adresse="FACE AU 92 RUE DU GENERAL LECLERC" data-typeCB='AVEC TPE' data-velodispo='12' data-espace='12' data-libelle='156' >
+							<td>St Andre Mairie</td>
+							<td>SAINT ANDRE LEZ LILLE</td>
+							<td>12</td>
+							<td>12</td>
+						</tr>
+
+						<tr  data-lat='50.646225' data-lon='3.053499' data-nameStation="Magasin" data-etat='EN SERVICE' data-connexion='CONNECTEE' data-commune="LILLE" data-adresse="3 RUE SAINT ANDRE" data-typeCB='SANS TPE' data-velodispo='6' data-espace='10' data-libelle='16' >
+							<td>Magasin</td>
+							<td>LILLE</td>
+							<td>6</td>
+							<td>10</td>
+						</tr>
+
+						<tr  data-lat='50.64031' data-lon='3.05774' data-nameStation="Rue Royale" data-etat='EN SERVICE' data-connexion='CONNECTEE' data-commune="LILLE" data-adresse="40 RUE ROYALE" data-typeCB='AVEC TPE' data-velodispo='9' data-espace='15' data-libelle='19' >
+							<td>Rue Royale</td>
+							<td>LILLE</td>
+							<td>9</td>
+							<td>15</td>
+						</tr>
+
+						<tr  data-lat='50.679123' data-lon='3.155906' data-nameStation="Mairie de Croix" data-etat='EN SERVICE' data-connexion='CONNECTEE' data-commune="CROIX" data-adresse="FACE AU 232, RUE JEAN JAURÈS" data-typeCB='AVEC TPE' data-velodispo='14' data-espace='10' data-libelle='200' >
+							<td>Mairie de Croix</td>
+							<td>CROIX</td>
+							<td>14</td>
+							<td>10</td>
+						</tr>
+
+						<tr  data-lat='50.67869' data-lon='3.172558' data-nameStation="Hopital Victor Provo" data-etat='EN SERVICE' data-connexion='CONNECTEE' data-commune="ROUBAIX" data-adresse="BOULEVARD DE LYON" data-typeCB='SANS TPE' data-velodispo='9' data-espace='7' data-libelle='217' >
+							<td>Hopital Victor Provo</td>
+							<td>ROUBAIX</td>
+							<td>9</td>
+							<td>7</td>
+						</tr>
+
+						<tr  data-lat='50.67392' data-lon='3.18514' data-nameStation="Place Spriet" data-etat='EN SERVICE' data-connexion='CONNECTEE' data-commune="ROUBAIX" data-adresse="PLACE CHARLES SPRIET" data-typeCB='AVEC TPE' data-velodispo='13' data-espace='11' data-libelle='218' >
+							<td>Place Spriet</td>
+							<td>ROUBAIX</td>
+							<td>13</td>
+							<td>11</td>
+						</tr>
+
+						<tr  data-lat='50.690315' data-lon='3.16912' data-nameStation="Place Trichon" data-etat='EN SERVICE' data-connexion='CONNECTEE' data-commune="ROUBAIX" data-adresse="3, PLACE DU TRICHON" data-typeCB='SANS TPE' data-velodispo='4' data-espace='12' data-libelle='223' >
+							<td>Place Trichon</td>
+							<td>ROUBAIX</td>
+							<td>4</td>
+							<td>12</td>
+						</tr>
+
+						<tr  data-lat='50.69535' data-lon='3.180779' data-nameStation="Pellart" data-etat='EN SERVICE' data-connexion='CONNECTEE' data-commune="ROUBAIX" data-adresse="15, RUE PELLART" data-typeCB='SANS TPE' data-velodispo='6' data-espace='10' data-libelle='228' >
+							<td>Pellart</td>
+							<td>ROUBAIX</td>
+							<td>6</td>
+							<td>10</td>
+						</tr>
+
+						<tr  data-lat='50.70076' data-lon='3.18407' data-nameStation="De la Vigne" data-etat='EN SERVICE' data-connexion='CONNECTEE' data-commune="ROUBAIX" data-adresse="181, BOULEVARD DE STRASBOURG" data-typeCB='SANS TPE' data-velodispo='9' data-espace='2' data-libelle='230' >
+							<td>De la Vigne</td>
+							<td>ROUBAIX</td>
+							<td>9</td>
+							<td>2</td>
+						</tr>
+
+						<tr  data-lat='50.689762' data-lon='3.177179' data-nameStation="Motte Bossut" data-etat='EN SERVICE' data-connexion='CONNECTEE' data-commune="ROUBAIX" data-adresse="ROND POINT DE L'EUROPE" data-typeCB='SANS TPE' data-velodispo='4' data-espace='14' data-libelle='231' >
+							<td>Motte Bossut</td>
+							<td>ROUBAIX</td>
+							<td>4</td>
+							<td>14</td>
+						</tr>
+
+						<tr  data-lat='50.696327' data-lon='3.16713' data-nameStation="Blanchemaille" data-etat='EN SERVICE' data-connexion='CONNECTEE' data-commune="ROUBAIX" data-adresse="AVENUE DES NATIONS UNIES ANGLE RUE BLANCHEMAILLE" data-typeCB='SANS TPE' data-velodispo='9' data-espace='7' data-libelle='235' >
+							<td>Blanchemaille</td>
+							<td>ROUBAIX</td>
+							<td>9</td>
+							<td>7</td>
+						</tr>
+
+						<tr  data-lat='50.719803' data-lon='3.156338' data-nameStation="Rue des Anges" data-etat='EN SERVICE' data-connexion='CONNECTEE' data-commune="TOURCOING" data-adresse="FACE AU 42 RUE DES ANGES" data-typeCB='SANS TPE' data-velodispo='6' data-espace='6' data-libelle='237' >
+							<td>Rue des Anges</td>
+							<td>TOURCOING</td>
+							<td>6</td>
+							<td>6</td>
+						</tr>
+
+						<tr  data-lat='50.71922' data-lon='3.163396' data-nameStation="Poste" data-etat='EN SERVICE' data-connexion='CONNECTEE' data-commune="TOURCOING" data-adresse="22, RUE LÉON SALEMBIER" data-typeCB='AVEC TPE' data-velodispo='6' data-espace='6' data-libelle='240' >
+							<td>Poste</td>
+							<td>TOURCOING</td>
+							<td>6</td>
+							<td>6</td>
+						</tr>
+
+						<tr  data-lat='50.72263' data-lon='3.150377' data-nameStation="Rue des Poutrains" data-etat='EN SERVICE' data-connexion='CONNECTEE' data-commune="TOURCOING" data-adresse="RUE DE LILLE" data-typeCB='SANS TPE' data-velodispo='7' data-espace='9' data-libelle='252' >
+							<td>Rue des Poutrains</td>
+							<td>TOURCOING</td>
+							<td>7</td>
+							<td>9</td>
+						</tr>
+
+						<tr  data-lat='50.73696' data-lon='3.171169' data-nameStation="Pont de Neuville" data-etat='EN SERVICE' data-connexion='CONNECTEE' data-commune="TOURCOING" data-adresse="301, RUE DU PONT DE NEUVILLE" data-typeCB='AVEC TPE' data-velodispo='9' data-espace='7' data-libelle='256' >
+							<td>Pont de Neuville</td>
+							<td>TOURCOING</td>
+							<td>9</td>
+							<td>7</td>
+						</tr>
+
+						<tr  data-lat='50.72101' data-lon='3.157978' data-nameStation="Place Roussel" data-etat='EN SERVICE' data-connexion='CONNECTEE' data-commune="TOURCOING" data-adresse="45, PLACE CHARLES ET ALBERT ROUSSEL" data-typeCB='AVEC TPE' data-velodispo='12' data-espace='8' data-libelle='260' >
+							<td>Place Roussel</td>
+							<td>TOURCOING</td>
+							<td>12</td>
+							<td>8</td>
+						</tr>
+
+						<tr  data-lat='50.697895' data-lon='3.206297' data-nameStation="Republique" data-etat='EN SERVICE' data-connexion='CONNECTEE' data-commune="WATTRELOS" data-adresse="203 RUE CARNOT" data-typeCB='SANS TPE' data-velodispo='7' data-espace='5' data-libelle='264' >
+							<td>Republique</td>
+							<td>WATTRELOS</td>
+							<td>7</td>
+							<td>5</td>
+						</tr>
+
+						<tr  data-lat='50.634686' data-lon='3.048344' data-nameStation="Palais Rameau" data-etat='EN SERVICE' data-connexion='CONNECTEE' data-commune="LILLE" data-adresse="17 RUE SOLFERINO" data-typeCB='AVEC TPE' data-velodispo='15' data-espace='25' data-libelle='28' >
+							<td>Palais Rameau</td>
+							<td>LILLE</td>
+							<td>15</td>
+							<td>25</td>
+						</tr>
+
+						<tr  data-lat='50.63022' data-lon='3.035681' data-nameStation="Port de Lille" data-etat='EN SERVICE' data-connexion='CONNECTEE' data-commune="LILLE" data-adresse="18 RUE DE TURENNE" data-typeCB='SANS TPE' data-velodispo='15' data-espace='11' data-libelle='33' >
+							<td>Port de Lille</td>
+							<td>LILLE</td>
+							<td>15</td>
+							<td>11</td>
+						</tr>
+
+						<tr  data-lat='50.627674' data-lon='3.050173' data-nameStation="Marche de Wazemmes" data-etat='EN SERVICE' data-connexion='CONNECTEE' data-commune="LILLE" data-adresse="298 RUE LEON GAMBETTA" data-typeCB='AVEC TPE' data-velodispo='12' data-espace='11' data-libelle='39' >
+							<td>Marche de Wazemmes</td>
+							<td>LILLE</td>
+							<td>12</td>
+							<td>11</td>
+						</tr>
+
+						<tr  data-lat='50.627586' data-lon='3.061974' data-nameStation="Place Philippe Lebon" data-etat='EN SERVICE' data-connexion='CONNECTEE' data-commune="LILLE" data-adresse="15 PLACE PHILLIPPE LEBON" data-typeCB='AVEC TPE' data-velodispo='15' data-espace='1' data-libelle='42' >
+							<td>Place Philippe Lebon</td>
+							<td>LILLE</td>
+							<td>15</td>
+							<td>1</td>
+						</tr>
+
+						<tr  data-lat='50.61831' data-lon='3.0722' data-nameStation="Porte de Douai" data-etat='EN SERVICE' data-connexion='CONNECTEE' data-commune="LILLE" data-adresse="PLACE FERNIG" data-typeCB='AVEC TPE' data-velodispo='1' data-espace='25' data-libelle='48' >
+							<td>Porte de Douai</td>
+							<td>LILLE</td>
+							<td>1</td>
+							<td>25</td>
+						</tr>
+
+						<tr  data-lat='50.62482' data-lon='3.068689' data-nameStation="JB Lebas" data-etat='EN SERVICE' data-connexion='CONNECTEE' data-commune="LILLE" data-adresse="2 RUE CAMBRAI" data-typeCB='SANS TPE' data-velodispo='23' data-espace='9' data-libelle='51' >
+							<td>JB Lebas</td>
+							<td>LILLE</td>
+							<td>23</td>
+							<td>9</td>
+						</tr>
+
+						<tr  data-lat='50.62276' data-lon='3.063799' data-nameStation="Place Colette Besson" data-etat='EN SERVICE' data-connexion='CONNECTEE' data-commune="LILLE" data-adresse="FACE AU 37 RUE DE WAZEMMES" data-typeCB='SANS TPE' data-velodispo='4' data-espace='18' data-libelle='52' >
+							<td>Place Colette Besson</td>
+							<td>LILLE</td>
+							<td>4</td>
+							<td>18</td>
+						</tr>
+
+						<tr  data-lat='50.61856' data-lon='3.049251' data-nameStation="Porte des Postes" data-etat='EN SERVICE' data-connexion='CONNECTEE' data-commune="LILLE" data-adresse="1 PLACE BARTHELEMY DOREZ" data-typeCB='AVEC TPE' data-velodispo='20' data-espace='17' data-libelle='53' >
+							<td>Porte des Postes</td>
+							<td>LILLE</td>
+							<td>20</td>
+							<td>17</td>
+						</tr>
+
+						<tr  data-lat='50.620857' data-lon='3.078947' data-nameStation="Porte de Valenciennes" data-etat='EN SERVICE' data-connexion='CONNECTEE' data-commune="LILLE" data-adresse="BOULEVARD DE BELFORT" data-typeCB='AVEC TPE' data-velodispo='3' data-espace='17' data-libelle='58' >
+							<td>Porte de Valenciennes</td>
+							<td>LILLE</td>
+							<td>3</td>
+							<td>17</td>
+						</tr>
+
+						<tr  data-lat='50.629246' data-lon='3.075218' data-nameStation="Lille Grand Palais" data-etat='EN SERVICE' data-connexion='CONNECTEE' data-commune="LILLE" data-adresse="30 BOULEVARD DU MARECHAL VAILLANT" data-typeCB='SANS TPE' data-velodispo='9' data-espace='14' data-libelle='61' >
+							<td>Lille Grand Palais</td>
+							<td>LILLE</td>
+							<td>9</td>
+							<td>14</td>
+						</tr>
+
+						<tr  data-lat='50.632965' data-lon='3.076437' data-nameStation="Zenith" data-etat='EN SERVICE' data-connexion='CONNECTEE' data-commune="LILLE" data-adresse="BOULEVARD EMILE DUBUISSON" data-typeCB='AVEC TPE' data-velodispo='7' data-espace='23' data-libelle='62' >
+							<td>Zenith</td>
+							<td>LILLE</td>
+							<td>7</td>
+							<td>23</td>
+						</tr>
+
+						<tr  data-lat='50.63237' data-lon='3.066273' data-nameStation="Delesalle Mediatheque" data-etat='EN SERVICE' data-connexion='CONNECTEE' data-commune="LILLE" data-adresse="35 RUE EDOUARD DELESALLE" data-typeCB='SANS TPE' data-velodispo='4' data-espace='14' data-libelle='66' >
+							<td>Delesalle Mediatheque</td>
+							<td>LILLE</td>
+							<td>4</td>
+							<td>14</td>
+						</tr>
+
+						<tr  data-lat='50.621952' data-lon='3.04534' data-nameStation="Montebello" data-etat='EN SERVICE' data-connexion='CONNECTEE' data-commune="LILLE" data-adresse="122 BOULEVARD MONTEBELLO" data-typeCB='AVEC TPE' data-velodispo='14' data-espace='10' data-libelle='67' >
+							<td>Montebello</td>
+							<td>LILLE</td>
+							<td>14</td>
+							<td>10</td>
+						</tr>
+
+						<tr  data-lat='50.61989' data-lon='3.084357' data-nameStation="Petit Maroc" data-etat='EN SERVICE' data-connexion='CONNECTEE' data-commune="LILLE" data-adresse="RUE DU PROFESSEUR LANGEVIN" data-typeCB='AVEC TPE' data-velodispo='15' data-espace='15' data-libelle='80' >
+							<td>Petit Maroc</td>
+							<td>LILLE</td>
+							<td>15</td>
+							<td>15</td>
+						</tr>
+
+						<tr  data-lat='50.625183' data-lon='3.100729' data-nameStation="Chanzy" data-etat='EN SERVICE' data-connexion='CONNECTEE' data-commune="LILLE HELLEMMES" data-adresse="58 RUE CHANZY" data-typeCB='SANS TPE' data-velodispo='5' data-espace='7' data-libelle='85' >
+							<td>Chanzy</td>
+							<td>LILLE HELLEMMES</td>
+							<td>5</td>
+							<td>7</td>
+						</tr>
+
+						<tr  data-lat='50.635082' data-lon='3.058015' data-nameStation="Rue Nationale" data-etat='EN SERVICE' data-connexion='CONNECTEE' data-commune="LILLE" data-adresse="91 RUE NATIONALE" data-typeCB='AVEC TPE' data-velodispo='14' data-espace='13' data-libelle='88' >
+							<td>Rue Nationale</td>
+							<td>LILLE</td>
+							<td>14</td>
+							<td>13</td>
+						</tr>
+
+						<tr  data-lat='50.619312' data-lon='3.041299' data-nameStation="Boulevard de Metz" data-etat='EN SERVICE' data-connexion='CONNECTEE' data-commune="LILLE" data-adresse="40 BOULEVARD DE METZ" data-typeCB='SANS TPE' data-velodispo='9' data-espace='9' data-libelle='89' >
+							<td>Boulevard de Metz</td>
+							<td>LILLE</td>
+							<td>9</td>
+							<td>9</td>
+						</tr>
+
+						<tr  data-lat='50.65937' data-lon='3.074057' data-nameStation="La Madeleine Gare" data-etat='EN SERVICE' data-connexion='CONNECTEE' data-commune="LA MADELEINE" data-adresse="250 RUE GENERAL DE GAULLE" data-typeCB='SANS TPE' data-velodispo='10' data-espace='7' data-libelle='97' >
+							<td>La Madeleine Gare</td>
+							<td>LA MADELEINE</td>
+							<td>10</td>
+							<td>7</td>
+						</tr>
+
+						<tr  data-lat='50.6549' data-lon='3.068756' data-nameStation="Place du Marche" data-etat='EN SERVICE' data-connexion='CONNECTEE' data-commune="LA MADELEINE" data-adresse="ANGLE DE LA RUE GAMBETTA ET LA PLACE FUSILLES ET DEPORTES" data-typeCB='AVEC TPE' data-velodispo='1' data-espace='23' data-libelle='98' >
+							<td>Place du Marche</td>
+							<td>LA MADELEINE</td>
+							<td>1</td>
+							<td>23</td>
+						</tr>
+
+						<tr  data-lat='50.638123' data-lon='3.112704' data-nameStation="Concorde" data-etat='EN SERVICE' data-connexion='CONNECTEE' data-commune="MONS EN BAROEUL" data-adresse="27 BOULEVARD ALPHONSE GAYET" data-typeCB='AVEC TPE' data-velodispo='4' data-espace='8' data-libelle='106' >
+							<td>Concorde</td>
+							<td>MONS EN BAROEUL</td>
+							<td>4</td>
+							<td>8</td>
+						</tr>
+
+						<tr  data-lat='50.645267' data-lon='3.100516' data-nameStation="General de Gaulle" data-etat='EN SERVICE' data-connexion='CONNECTEE' data-commune="MONS EN BAROEUL" data-adresse="108 RUE DU GENERAL DE GAULLE" data-typeCB='AVEC TPE' data-velodispo='8' data-espace='12' data-libelle='108' >
+							<td>General de Gaulle</td>
+							<td>MONS EN BAROEUL</td>
+							<td>8</td>
+							<td>12</td>
+						</tr>
+
+						<tr  data-lat='50.63734' data-lon='3.060977' data-nameStation="Nouveau siecle" data-etat='EN SERVICE' data-connexion='CONNECTEE' data-commune="LILLE" data-adresse="10 RUE DE PAS (SUR LA PLACE PIERRE MENDES FRANCE)" data-typeCB='AVEC TPE' data-velodispo='10' data-espace='22' data-libelle='11' >
+							<td>Nouveau siecle</td>
+							<td>LILLE</td>
+							<td>10</td>
+							<td>22</td>
+						</tr>
+
+						<tr  data-lat='50.62486' data-lon='3.116677' data-nameStation="Hellemmes Cimetieres" data-etat='EN SERVICE' data-connexion='CONNECTEE' data-commune="HELLEMMES" data-adresse="318, RUE ROGER SALENGRO" data-typeCB='SANS TPE' data-velodispo='5' data-espace='7' data-libelle='111' >
+							<td>Hellemmes Cimetieres</td>
+							<td>HELLEMMES</td>
+							<td>5</td>
+							<td>7</td>
+						</tr>
+
+						<tr  data-lat='50.62651' data-lon='3.079211' data-nameStation="Bois Habite" data-etat='EN SERVICE' data-connexion='CONNECTEE' data-commune="LILLE" data-adresse="BOULEVARD DU PRÉSIDENT HOOVER" data-typeCB='SANS TPE' data-velodispo='2' data-espace='15' data-libelle='114' >
+							<td>Bois Habite</td>
+							<td>LILLE</td>
+							<td>2</td>
+							<td>15</td>
+						</tr>
+
+						<tr  data-lat='50.63708' data-lon='3.127964' data-nameStation="Flers Mairie" data-etat='EN SERVICE' data-connexion='CONNECTEE' data-commune="VILLENEUVE D'ASCQ" data-adresse="16 RUE DU GÉNÉRAL LECLERC" data-typeCB='AVEC TPE' data-velodispo='8' data-espace='4' data-libelle='127' >
+							<td>Flers Mairie</td>
+							<td>VILLENEUVE D'ASCQ</td>
+							<td>8</td>
+							<td>4</td>
+						</tr>
+
+						<tr  data-lat='50.633842' data-lon='3.127335' data-nameStation="Rue Louise Michel" data-etat='EN SERVICE' data-connexion='CONNECTEE' data-commune="VILLENEUVE D'ASCQ" data-adresse="93 RUE LOUISE MICHEL" data-typeCB='SANS TPE' data-velodispo='10' data-espace='6' data-libelle='128' >
+							<td>Rue Louise Michel</td>
+							<td>VILLENEUVE D'ASCQ</td>
+							<td>10</td>
+							<td>6</td>
+						</tr>
+
+						<tr  data-lat='50.619602' data-lon='3.13197' data-nameStation="V.Ascq Hotel de Ville" data-etat='EN SERVICE' data-connexion='CONNECTEE' data-commune="VILLENEUVE D'ASCQ" data-adresse="RUE VERMEER - PARKING DE L'HÔTEL DE VILLE" data-typeCB='AVEC TPE' data-velodispo='10' data-espace='27' data-libelle='131' >
+							<td>V.Ascq Hotel de Ville</td>
+							<td>VILLENEUVE D'ASCQ</td>
+							<td>10</td>
+							<td>27</td>
+						</tr>
+
+						<tr  data-lat='50.61915' data-lon='3.126501' data-nameStation="Boulevard de Valmy" data-etat='EN SERVICE' data-connexion='CONNECTEE' data-commune="VILLENEUVE D'ASCQ" data-adresse="FACE AU 233 BOULEVARD DE VALMY" data-typeCB='AVEC TPE' data-velodispo='10' data-espace='18' data-libelle='133' >
+							<td>Boulevard de Valmy</td>
+							<td>VILLENEUVE D'ASCQ</td>
+							<td>10</td>
+							<td>18</td>
+						</tr>
+
+						<tr  data-lat='50.61682' data-lon='3.140808' data-nameStation="Metro Triolo" data-etat='EN SERVICE' data-connexion='CONNECTEE' data-commune="VILLENEUVE D'ASCQ" data-adresse="2 RUE TRAVERSIÈRE ANGLE ALLÉE TURGOT" data-typeCB='AVEC TPE' data-velodispo='7' data-espace='17' data-libelle='141' >
+							<td>Metro Triolo</td>
+							<td>VILLENEUVE D'ASCQ</td>
+							<td>7</td>
+							<td>17</td>
+						</tr>
+
+						<tr  data-lat='50.60548' data-lon='3.077622' data-nameStation="Ronchin Mairie" data-etat='EN SERVICE' data-connexion='CONNECTEE' data-commune="RONCHIN" data-adresse="SUR LE PARVIS DE LA MAIRIE" data-typeCB='AVEC TPE' data-velodispo='8' data-espace='16' data-libelle='150' >
+							<td>Ronchin Mairie</td>
+							<td>RONCHIN</td>
+							<td>8</td>
+							<td>16</td>
+						</tr>
+
+						<tr  data-lat='50.64989' data-lon='3.042045' data-nameStation="Canon d'Or" data-etat='EN SERVICE' data-connexion='CONNECTEE' data-commune="LAMBERSART" data-adresse="FACE AU 255 RUE DE LILLE" data-typeCB='AVEC TPE' data-velodispo='10' data-espace='6' data-libelle='157' >
+							<td>Canon d'Or</td>
+							<td>LAMBERSART</td>
+							<td>10</td>
+							<td>6</td>
+						</tr>
+
+						<tr  data-lat='50.6428' data-lon='3.055932' data-nameStation="Voltaire" data-etat='EN SERVICE' data-connexion='CONNECTEE' data-commune="LILLE" data-adresse="93 RUE ROYALE" data-typeCB='SANS TPE' data-velodispo='5' data-espace='9' data-libelle='18' >
+							<td>Voltaire</td>
+							<td>LILLE</td>
+							<td>5</td>
+							<td>9</td>
+						</tr>
+
+						<tr  data-lat='50.632233' data-lon='3.046134' data-nameStation="Universite Catholique" data-etat='EN SERVICE' data-connexion='CONNECTEE' data-commune="LILLE" data-adresse="RUE DU PORT BD VAUBAN" data-typeCB='AVEC TPE' data-velodispo='10' data-espace='21' data-libelle='2' >
+							<td>Universite Catholique</td>
+							<td>LILLE</td>
+							<td>10</td>
+							<td>21</td>
+						</tr>
+
+						<tr  data-lat='50.684757' data-lon='3.171974' data-nameStation="Jean Moulin" data-etat='EN SERVICE' data-connexion='CONNECTEE' data-commune="ROUBAIX" data-adresse="FACE AU 49 BIS BD DU GÉNÉRAL DE GAULLE" data-typeCB='SANS TPE' data-velodispo='8' data-espace='7' data-libelle='204' >
+							<td>Jean Moulin</td>
+							<td>ROUBAIX</td>
+							<td>8</td>
+							<td>7</td>
+						</tr>
+
+						<tr  data-lat='50.69094' data-lon='3.188538' data-nameStation="Condition Publique" data-etat='EN SERVICE' data-connexion='CONNECTEE' data-commune="ROUBAIX" data-adresse="45, RUE LOUIS DUPIRE" data-typeCB='AVEC TPE' data-velodispo='7' data-espace='11' data-libelle='205' >
+							<td>Condition Publique</td>
+							<td>ROUBAIX</td>
+							<td>7</td>
+							<td>11</td>
+						</tr>
+
+						<tr  data-lat='50.674995' data-lon='3.195737' data-nameStation="Usine" data-etat='EN SERVICE' data-connexion='CONNECTEE' data-commune="ROUBAIX" data-adresse="AVENUE ALFRED MOTTE" data-typeCB='AVEC TPE' data-velodispo='14' data-espace='16' data-libelle='209' >
+							<td>Usine</td>
+							<td>ROUBAIX</td>
+							<td>14</td>
+							<td>16</td>
+						</tr>
+
+						<tr  data-lat='50.674164' data-lon='3.174519' data-nameStation="Gustave Delory" data-etat='EN SERVICE' data-connexion='CONNECTEE' data-commune="ROUBAIX" data-adresse="48, AVENUE GUSTAVE DELORY" data-typeCB='AVEC TPE' data-velodispo='11' data-espace='7' data-libelle='211' >
+							<td>Gustave Delory</td>
+							<td>ROUBAIX</td>
+							<td>11</td>
+							<td>7</td>
+						</tr>
+
+						<tr  data-lat='50.682053' data-lon='3.182205' data-nameStation="Danielle Lesaffre" data-etat='EN SERVICE' data-connexion='CONNECTEE' data-commune="ROUBAIX" data-adresse="42, RUE DUPUY DE LOMÉ" data-typeCB='SANS TPE' data-velodispo='1' data-espace='17' data-libelle='212' >
+							<td>Danielle Lesaffre</td>
+							<td>ROUBAIX</td>
+							<td>1</td>
+							<td>17</td>
+						</tr>
+
+						<tr  data-lat='50.684593' data-lon='3.200799' data-nameStation="Trois Ponts" data-etat='EN SERVICE' data-connexion='CONNECTEE' data-commune="ROUBAIX" data-adresse="186, AVENUE JULIEN LAGACHE" data-typeCB='SANS TPE' data-velodispo='0' data-espace='11' data-libelle='215' >
+							<td>Trois Ponts</td>
+							<td>ROUBAIX</td>
+							<td>0</td>
+							<td>11</td>
+						</tr>
+
+						<tr  data-lat='50.69184' data-lon='3.173925' data-nameStation="Roubaix Mairie" data-etat='EN SERVICE' data-connexion='CONNECTEE' data-commune="ROUBAIX" data-adresse="FACE AU 1, CONTOUR  SAINT MARTIN" data-typeCB='AVEC TPE' data-velodispo='16' data-espace='14' data-libelle='221' >
+							<td>Roubaix Mairie</td>
+							<td>ROUBAIX</td>
+							<td>16</td>
+							<td>14</td>
+						</tr>
+
+						<tr  data-lat='50.68645' data-lon='3.170006' data-nameStation="Charles de Gaulle" data-etat='EN SERVICE' data-connexion='CONNECTEE' data-commune="ROUBAIX" data-adresse="72, RUE DE LILLE" data-typeCB='AVEC TPE' data-velodispo='8' data-espace='8' data-libelle='226' >
+							<td>Charles de Gaulle</td>
+							<td>ROUBAIX</td>
+							<td>8</td>
+							<td>8</td>
+						</tr>
+
+						<tr  data-lat='50.699734' data-lon='3.174347' data-nameStation="Fosse aux Chenes" data-etat='EN SERVICE' data-connexion='CONNECTEE' data-commune="ROUBAIX" data-adresse="13, PLACE DE LA FOSSE AUX CHÊNES" data-typeCB='AVEC TPE' data-velodispo='11' data-espace='3' data-libelle='232' >
+							<td>Fosse aux Chenes</td>
+							<td>ROUBAIX</td>
+							<td>11</td>
+							<td>3</td>
+						</tr>
+
+						<tr  data-lat='50.702026' data-lon='3.172654' data-nameStation="Rue de Tourcoing" data-etat='EN SERVICE' data-connexion='CONNECTEE' data-commune="ROUBAIX" data-adresse="RUE DE TOURCOING (SUR LA PARKING GRDF)" data-typeCB='SANS TPE' data-velodispo='7' data-espace='9' data-libelle='233' >
+							<td>Rue de Tourcoing</td>
+							<td>ROUBAIX</td>
+							<td>7</td>
+							<td>9</td>
+						</tr>
+
+						<tr  data-lat='50.63698' data-lon='3.071009' data-nameStation="Flandres Euralille" data-etat='EN SERVICE' data-connexion='CONNECTEE' data-commune="LILLE" data-adresse="PLACE DES BUISSES" data-typeCB='AVEC TPE' data-velodispo='10' data-espace='30' data-libelle='24' >
+							<td>Flandres Euralille</td>
+							<td>LILLE</td>
+							<td>10</td>
+							<td>30</td>
+						</tr>
+
+						<tr  data-lat='50.722343' data-lon='3.170847' data-nameStation="Le Corbusier" data-etat='EN SERVICE' data-connexion='CONNECTEE' data-commune="TOURCOING" data-adresse="RUE DES PIATS (SOUS ABRI BUS - PARVIS DE L'ATELIER)" data-typeCB='SANS TPE' data-velodispo='8' data-espace='10' data-libelle='241' >
+							<td>Le Corbusier</td>
+							<td>TOURCOING</td>
+							<td>8</td>
+							<td>10</td>
+						</tr>
+
+						<tr  data-lat='50.72389' data-lon='3.160344' data-nameStation="Tourcoing Mairie" data-etat='EN SERVICE' data-connexion='CONNECTEE' data-commune="TOURCOING" data-adresse="6 BIS, RUE NATIONALE" data-typeCB='AVEC TPE' data-velodispo='7' data-espace='15' data-libelle='250' >
+							<td>Tourcoing Mairie</td>
+							<td>TOURCOING</td>
+							<td>7</td>
+							<td>15</td>
+						</tr>
+
+						<tr  data-lat='50.725006' data-lon='3.150677' data-nameStation="Avenue Millet" data-etat='EN SERVICE' data-connexion='CONNECTEE' data-commune="TOURCOING" data-adresse="SECTEUR RUE CONDORCET" data-typeCB='SANS TPE' data-velodispo='4' data-espace='8' data-libelle='253' >
+							<td>Avenue Millet</td>
+							<td>TOURCOING</td>
+							<td>4</td>
+							<td>8</td>
+						</tr>
+
+						<tr  data-lat='50.717323' data-lon='3.162236' data-nameStation="Sebastopol" data-etat='EN SERVICE' data-connexion='CONNECTEE' data-commune="TOURCOING" data-adresse="FACE AU 69 RUE CARNOT" data-typeCB='SANS TPE' data-velodispo='8' data-espace='10' data-libelle='254' >
+							<td>Sebastopol</td>
+							<td>TOURCOING</td>
+							<td>8</td>
+							<td>10</td>
+						</tr>
+
+						<tr  data-lat='50.732277' data-lon='3.157656' data-nameStation="Phalempins" data-etat='EN SERVICE' data-connexion='CONNECTEE' data-commune="TOURCOING" data-adresse="PHALEMPINS" data-typeCB='AVEC TPE' data-velodispo='5' data-espace='11' data-libelle='261' >
+							<td>Phalempins</td>
+							<td>TOURCOING</td>
+							<td>5</td>
+							<td>11</td>
+						</tr>
+
+						<tr  data-lat='50.636093' data-lon='3.050447' data-nameStation="Jardin Vauban" data-etat='EN SERVICE' data-connexion='CONNECTEE' data-commune="LILLE" data-adresse="39 BOULEVARD VAUBAN" data-typeCB='SANS TPE' data-velodispo='5' data-espace='13' data-libelle='3' >
+							<td>Jardin Vauban</td>
+							<td>LILLE</td>
+							<td>5</td>
+							<td>13</td>
+						</tr>
+
+						<tr  data-lat='50.64142' data-lon='3.067873' data-nameStation="Place aux Bleuets" data-etat='EN SERVICE' data-connexion='CONNECTEE' data-commune="LILLE" data-adresse="15 RUE DE COURTRAI" data-typeCB='SANS TPE' data-velodispo='2' data-espace='14' data-libelle='32' >
+							<td>Place aux Bleuets</td>
+							<td>LILLE</td>
+							<td>2</td>
+							<td>14</td>
+						</tr>
+
+						<tr  data-lat='50.62899' data-lon='3.043307' data-nameStation="Leclerc" data-etat='EN SERVICE' data-connexion='CONNECTEE' data-commune="LILLE" data-adresse="24 PLACE MARECHAL LECLERC" data-typeCB='AVEC TPE' data-velodispo='11' data-espace='7' data-libelle='35' >
+							<td>Leclerc</td>
+							<td>LILLE</td>
+							<td>11</td>
+							<td>7</td>
+						</tr>
+
+						<tr  data-lat='50.62337' data-lon='3.037553' data-nameStation="Fulton" data-etat='EN SERVICE' data-connexion='CONNECTEE' data-commune="LILLE" data-adresse="14 RUE DU BAZINGHIEN" data-typeCB='SANS TPE' data-velodispo='5' data-espace='7' data-libelle='37' >
+							<td>Fulton</td>
+							<td>LILLE</td>
+							<td>5</td>
+							<td>7</td>
+						</tr>
+
+						<tr  data-lat='50.62614' data-lon='3.051729' data-nameStation="Metro Gambetta" data-etat='EN SERVICE' data-connexion='CONNECTEE' data-commune="LILLE" data-adresse="41 RUE DU MARCHE" data-typeCB='AVEC TPE' data-velodispo='8' data-espace='8' data-libelle='40' >
+							<td>Metro Gambetta</td>
+							<td>LILLE</td>
+							<td>8</td>
+							<td>8</td>
+						</tr>
+
+						<tr  data-lat='50.629044' data-lon='3.058288' data-nameStation="Theatre Sebastopol" data-etat='EN SERVICE' data-connexion='CONNECTEE' data-commune="LILLE" data-adresse="3 PLACE SEBASTOPOL" data-typeCB='AVEC TPE' data-velodispo='12' data-espace='12' data-libelle='43' >
+							<td>Theatre Sebastopol</td>
+							<td>LILLE</td>
+							<td>12</td>
+							<td>12</td>
+						</tr>
+
+						<tr  data-lat='50.61957' data-lon='3.068387' data-nameStation="Place Deliot" data-etat='EN SERVICE' data-connexion='CONNECTEE' data-commune="LILLE" data-adresse="1 PLACE DELIOT" data-typeCB='SANS TPE' data-velodispo='4' data-espace='20' data-libelle='49' >
+							<td>Place Deliot</td>
+							<td>LILLE</td>
+							<td>4</td>
+							<td>20</td>
+						</tr>
+
+						<tr  data-lat='50.62338' data-lon='3.051565' data-nameStation="Metro Wazemmes" data-etat='EN SERVICE' data-connexion='CONNECTEE' data-commune="LILLE" data-adresse="93 RUE RACINE" data-typeCB='AVEC TPE' data-velodispo='16' data-espace='4' data-libelle='54' >
+							<td>Metro Wazemmes</td>
+							<td>LILLE</td>
+							<td>16</td>
+							<td>4</td>
+						</tr>
+
+						<tr  data-lat='50.62418' data-lon='3.058902' data-nameStation="Barthelemy Delespaul" data-etat='EN SERVICE' data-connexion='CONNECTEE' data-commune="LILLE" data-adresse="FACE AU 52 RUE BARTHELEMY DELESPAUL" data-typeCB='SANS TPE' data-velodispo='3' data-espace='15' data-libelle='57' >
+							<td>Barthelemy Delespaul</td>
+							<td>LILLE</td>
+							<td>3</td>
+							<td>15</td>
+						</tr>
+
+						<tr  data-lat='50.642315' data-lon='3.087979' data-nameStation="St Maurice Pellevoisin" data-etat='EN SERVICE' data-connexion='CONNECTEE' data-commune="LILLE" data-adresse="211 RUE DU FAUBOURG DE ROUBAIX" data-typeCB='AVEC TPE' data-velodispo='9' data-espace='15' data-libelle='73' >
+							<td>St Maurice Pellevoisin</td>
+							<td>LILLE</td>
+							<td>9</td>
+							<td>15</td>
+						</tr>
+
+						<tr  data-lat='50.641018' data-lon='3.082493' data-nameStation="Faubourg de Roubaix" data-etat='EN SERVICE' data-connexion='CONNECTEE' data-commune="LILLE" data-adresse="104 RUE DU FAUBOURG DE ROUBAIX" data-typeCB='SANS TPE' data-velodispo='16' data-espace='1' data-libelle='74' >
+							<td>Faubourg de Roubaix</td>
+							<td>LILLE</td>
+							<td>16</td>
+							<td>1</td>
+						</tr>
+
+						<tr  data-lat='50.615536' data-lon='3.048518' data-nameStation="Hotel de Police" data-etat='EN SERVICE' data-connexion='CONNECTEE' data-commune="LILLE" data-adresse="RUE DU FAUBOURG DES POSTES" data-typeCB='SANS TPE' data-velodispo='10' data-espace='8' data-libelle='78' >
+							<td>Hotel de Police</td>
+							<td>LILLE</td>
+							<td>10</td>
+							<td>8</td>
+						</tr>
+
+						<tr  data-lat='50.627243' data-lon='3.109266' data-nameStation="Mairie d'Hellemmes" data-etat='EN SERVICE' data-connexion='CONNECTEE' data-commune="LILLE HELLEMMES" data-adresse="165 RUE ROGER SALENGRO" data-typeCB='AVEC TPE' data-velodispo='3' data-espace='21' data-libelle='84' >
+							<td>Mairie d'Hellemmes</td>
+							<td>LILLE HELLEMMES</td>
+							<td>3</td>
+							<td>21</td>
+						</tr>
+
+						<tr  data-lat='50.628918' data-lon='3.088147' data-nameStation="Stade Ballet" data-etat='EN SERVICE' data-connexion='CONNECTEE' data-commune="LILLE" data-adresse="85 RUE DU LONG POT" data-typeCB='SANS TPE' data-velodispo='14' data-espace='4' data-libelle='93' >
+							<td>Stade Ballet</td>
+							<td>LILLE</td>
+							<td>14</td>
+							<td>4</td>
+						</tr>
+
+						<tr  data-lat='50.641926' data-lon='3.075992' data-nameStation="Metropole Europeenne de Lille" data-etat='EN SERVICE' data-connexion='CONNECTEE' data-commune="LILLE" data-adresse="MEL RUE DU BALLON" data-typeCB='AVEC TPE' data-velodispo='1' data-espace='35' data-libelle='1' >
+							<td>Metropole Europeenne de Lille</td>
+							<td>LILLE</td>
+							<td>1</td>
+							<td>35</td>
+						</tr>
+
+						<tr  data-lat='50.651638' data-lon='3.081625' data-nameStation="Saint Maur" data-etat='EN SERVICE' data-connexion='CONNECTEE' data-commune="LA MADELEINE" data-adresse="260 AVENUE DE LA REPUBLIQUE" data-typeCB='AVEC TPE' data-velodispo='16' data-espace='8' data-libelle='100' >
+							<td>Saint Maur</td>
+							<td>LA MADELEINE</td>
+							<td>16</td>
+							<td>8</td>
+						</tr>
+
+						<tr  data-lat='50.6423' data-lon='3.099291' data-nameStation="Mons Sarts" data-etat='EN SERVICE' data-connexion='CONNECTEE' data-commune="MONS EN BAROEUL" data-adresse="AVENUE DES ACACIAS" data-typeCB='AVEC TPE' data-velodispo='12' data-espace='12' data-libelle='101' >
+							<td>Mons Sarts</td>
+							<td>MONS EN BAROEUL</td>
+							<td>12</td>
+							<td>12</td>
+						</tr>
+
+						<tr  data-lat='50.636105' data-lon='3.106438' data-nameStation="Lavoisier" data-etat='EN SERVICE' data-connexion='CONNECTEE' data-commune="MONS EN BAROEUL" data-adresse="5 RUE LAURENT DE LAVOISIER" data-typeCB='SANS TPE' data-velodispo='8' data-espace='4' data-libelle='107' >
+							<td>Lavoisier</td>
+							<td>MONS EN BAROEUL</td>
+							<td>8</td>
+							<td>4</td>
+						</tr>
+
+						<tr  data-lat='50.623466' data-lon='3.030667' data-nameStation="Square du Portugal" data-etat='EN SERVICE' data-connexion='CONNECTEE' data-commune="LILLE" data-adresse="FACE AU 204 RUE DE LA BASSEE" data-typeCB='SANS TPE' data-velodispo='15' data-espace='1' data-libelle='109' >
+							<td>Square du Portugal</td>
+							<td>LILLE</td>
+							<td>15</td>
+							<td>1</td>
+						</tr>
+
+						<tr  data-lat='50.62487' data-lon='3.034234' data-nameStation="Rue Bonte-Pollet" data-etat='EN SERVICE' data-connexion='CONNECTEE' data-commune="LILLE" data-adresse="11 RUE BONTE POLLET" data-typeCB='AVEC TPE' data-velodispo='11' data-espace='5' data-libelle='110' >
+							<td>Rue Bonte-Pollet</td>
+							<td>LILLE</td>
+							<td>11</td>
+							<td>5</td>
+						</tr>
+
+						<tr  data-lat='50.641617' data-lon='3.031375' data-nameStation="Hippodrome" data-etat='EN SERVICE' data-connexion='CONNECTEE' data-commune="LAMBERSART" data-adresse="9, AVENUE HENRI GRUSON" data-typeCB='AVEC TPE' data-velodispo='12' data-espace='9' data-libelle='117' >
+							<td>Hippodrome</td>
+							<td>LAMBERSART</td>
+							<td>12</td>
+							<td>9</td>
+						</tr>
+
+						<tr  data-lat='50.665714' data-lon='3.087294' data-nameStation="Piscine de Marcq" data-etat='EN SERVICE' data-connexion='CONNECTEE' data-commune="MARCQ EN BAROEUL" data-adresse="298-300 AVENUE DE LATTRE DE TASSIGNY" data-typeCB='SANS TPE' data-velodispo='10' data-espace='6' data-libelle='122' >
+							<td>Piscine de Marcq</td>
+							<td>MARCQ EN BAROEUL</td>
+							<td>10</td>
+							<td>6</td>
+						</tr>
+
+						<tr  data-lat='50.63608' data-lon='3.130853' data-nameStation="Flers Chateau" data-etat='EN SERVICE' data-connexion='CONNECTEE' data-commune="VILLENEUVE D'ASCQ" data-adresse="RUE DE LA CHEVALERIE" data-typeCB='AVEC TPE' data-velodispo='7' data-espace='7' data-libelle='129' >
+							<td>Flers Chateau</td>
+							<td>VILLENEUVE D'ASCQ</td>
+							<td>7</td>
+							<td>7</td>
+						</tr>
+
+						<tr  data-lat='50.624516' data-lon='3.127894' data-nameStation="Pont de Bois" data-etat='EN SERVICE' data-connexion='CONNECTEE' data-commune="VILLENEUVE D'ASCQ" data-adresse="RUE BAUDOUIN IX - MÉTRO PONT DE BOIS" data-typeCB='AVEC TPE' data-velodispo='0' data-espace='30' data-libelle='130' >
+							<td>Pont de Bois</td>
+							<td>VILLENEUVE D'ASCQ</td>
+							<td>0</td>
+							<td>30</td>
+						</tr>
+
+						<tr  data-lat='50.615868' data-lon='3.126089' data-nameStation="Heron Parc" data-etat='EN SERVICE' data-connexion='CONNECTEE' data-commune="VILLENEUVE D'ASCQ" data-adresse="40, RUE DE LA VAGUE" data-typeCB='AVEC TPE' data-velodispo='4' data-espace='26' data-libelle='137' >
+							<td>Heron Parc</td>
+							<td>VILLENEUVE D'ASCQ</td>
+							<td>4</td>
+							<td>26</td>
+						</tr>
+
+						<tr  data-lat='50.6206' data-lon='3.138207' data-nameStation="Tremiere" data-etat='EN SERVICE' data-connexion='CONNECTEE' data-commune="VILLENEUVE D'ASCQ" data-adresse="RUE TRÉMIÈRES ANGLE RUE DES FUSILLÉS" data-typeCB='SANS TPE' data-velodispo='9' data-espace='11' data-libelle='142' >
+							<td>Tremiere</td>
+							<td>VILLENEUVE D'ASCQ</td>
+							<td>9</td>
+							<td>11</td>
+						</tr>
+
+						<tr  data-lat='50.65547' data-lon='3.064989' data-nameStation="Pompidou" data-etat='EN SERVICE' data-connexion='CONNECTEE' data-commune="LA MADELEINE" data-adresse="FACE AU 102 ALLEE DU RIEZ" data-typeCB='SANS TPE' data-velodispo='6' data-espace='18' data-libelle='153' >
+							<td>Pompidou</td>
+							<td>LA MADELEINE</td>
+							<td>6</td>
+							<td>18</td>
+						</tr>
+
+						<tr  data-lat='50.65532' data-lon='3.060615' data-nameStation="Chaufferie" data-etat='EN SERVICE' data-connexion='CONNECTEE' data-commune="LA MADELEINE" data-adresse="FACE AU 125 RUE ROGER SALENGRO" data-typeCB='AVEC TPE' data-velodispo='9' data-espace='7' data-libelle='154' >
+							<td>Chaufferie</td>
+							<td>LA MADELEINE</td>
+							<td>9</td>
+							<td>7</td>
+						</tr>
+
+						<tr  data-lat='50.644943' data-lon='3.036932' data-nameStation="Delecaut" data-etat='EN SERVICE' data-connexion='CONNECTEE' data-commune="LAMBERSART" data-adresse="FACE AU 102 AVENUE HENRI DELECAUX" data-typeCB='AVEC TPE' data-velodispo='9' data-espace='11' data-libelle='158' >
+							<td>Delecaut</td>
+							<td>LAMBERSART</td>
+							<td>9</td>
+							<td>11</td>
+						</tr>
+
+						<tr  data-lat='50.644695' data-lon='3.060867' data-nameStation="Halle aux sucres" data-etat='EN SERVICE' data-connexion='CONNECTEE' data-commune="LILLE" data-adresse="33 AVENUE DU PEUPLE BELGE" data-typeCB='AVEC TPE' data-velodispo='3' data-espace='16' data-libelle='17' >
+							<td>Halle aux sucres</td>
+							<td>LILLE</td>
+							<td>3</td>
+							<td>16</td>
+						</tr>
+
+						<tr  data-lat='50.640385' data-lon='3.062053' data-nameStation="N.D. de la Treille" data-etat='EN SERVICE' data-connexion='CONNECTEE' data-commune="LILLE" data-adresse="PLACE GILLSON" data-typeCB='SANS TPE' data-velodispo='15' data-espace='15' data-libelle='20' >
+							<td>N.D. de la Treille</td>
+							<td>LILLE</td>
+							<td>15</td>
+							<td>15</td>
+						</tr>
+
+						<tr  data-lat='50.68079' data-lon='3.167454' data-nameStation="Victor Provo" data-etat='EN SERVICE' data-connexion='CONNECTEE' data-commune="ROUBAIX" data-adresse="BOULEVARD DU GÉNÉRAL DE GAULLE" data-typeCB='AVEC TPE' data-velodispo='7' data-espace='13' data-libelle='203' >
+							<td>Victor Provo</td>
+							<td>ROUBAIX</td>
+							<td>7</td>
+							<td>13</td>
+						</tr>
+
+						<tr  data-lat='50.67544' data-lon='3.181998' data-nameStation="De Fourmies" data-etat='EN SERVICE' data-connexion='CONNECTEE' data-commune="ROUBAIX" data-adresse="107, BOULEVARD DE FOURMIES" data-typeCB='SANS TPE' data-velodispo='5' data-espace='7' data-libelle='208' >
+							<td>De Fourmies</td>
+							<td>ROUBAIX</td>
+							<td>5</td>
+							<td>7</td>
+						</tr>
+
+						<tr  data-lat='50.693768' data-lon='3.167666' data-nameStation="Musee Art et Industrie" data-etat='EN SERVICE' data-connexion='CONNECTEE' data-commune="ROUBAIX" data-adresse="105, AVENUE JEAN-BAPTISTE LEBAS" data-typeCB='AVEC TPE' data-velodispo='7' data-espace='7' data-libelle='220' >
+							<td>Musee Art et Industrie</td>
+							<td>ROUBAIX</td>
+							<td>7</td>
+							<td>7</td>
+						</tr>
+
+						<tr  data-lat='50.691406' data-lon='3.162704' data-nameStation="Centre Nautique" data-etat='EN SERVICE' data-connexion='CONNECTEE' data-commune="ROUBAIX" data-adresse="26, RUE DE L'EPEULE" data-typeCB='AVEC TPE' data-velodispo='8' data-espace='6' data-libelle='224' >
+							<td>Centre Nautique</td>
+							<td>ROUBAIX</td>
+							<td>8</td>
+							<td>6</td>
+						</tr>
+
+						<tr  data-lat='50.692368' data-lon='3.185092' data-nameStation="Nations Unies" data-etat='EN SERVICE' data-connexion='CONNECTEE' data-commune="ROUBAIX" data-adresse="158, BOULEVARD GAMBETTA" data-typeCB='SANS TPE' data-velodispo='8' data-espace='10' data-libelle='229' >
+							<td>Nations Unies</td>
+							<td>ROUBAIX</td>
+							<td>8</td>
+							<td>10</td>
+						</tr>
+
+						<tr  data-lat='50.716843' data-lon='3.167834' data-nameStation="Tourcoing gare" data-etat='EN SERVICE' data-connexion='CONNECTEE' data-commune="TOURCOING" data-adresse="PLACE PIERRE SEMARD" data-typeCB='AVEC TPE' data-velodispo='8' data-espace='10' data-libelle='242' >
+							<td>Tourcoing gare</td>
+							<td>TOURCOING</td>
+							<td>8</td>
+							<td>10</td>
+						</tr>
+
+						<tr  data-lat='50.727448' data-lon='3.16646' data-nameStation="F Roosevelt" data-etat='EN SERVICE' data-connexion='CONNECTEE' data-commune="TOURCOING" data-adresse="2-14 BOULEVARD DE L'ÉGALITÉ" data-typeCB='SANS TPE' data-velodispo='7' data-espace='5' data-libelle='244' >
+							<td>F Roosevelt</td>
+							<td>TOURCOING</td>
+							<td>7</td>
+							<td>5</td>
+						</tr>
+
+						<tr  data-lat='50.734142' data-lon='3.167987' data-nameStation="Rouget de l Isle" data-etat='EN SERVICE' data-connexion='CONNECTEE' data-commune="TOURCOING" data-adresse="SECTEUR BVRD DE L'EGALITÉ" data-typeCB='AVEC TPE' data-velodispo='6' data-espace='9' data-libelle='247' >
+							<td>Rouget de l Isle</td>
+							<td>TOURCOING</td>
+							<td>6</td>
+							<td>9</td>
+						</tr>
+
+						<tr  data-lat='50.7134' data-lon='3.165011' data-nameStation="Rue de Roubaix" data-etat='EN SERVICE' data-connexion='CONNECTEE' data-commune="TOURCOING" data-adresse="SECTEUR UNION" data-typeCB='SANS TPE' data-velodispo='8' data-espace='4' data-libelle='255' >
+							<td>Rue de Roubaix</td>
+							<td>TOURCOING</td>
+							<td>8</td>
+							<td>4</td>
+						</tr>
+
+						<tr  data-lat='50.714733' data-lon='3.157181' data-nameStation="Charles Wattinne" data-etat='EN SERVICE' data-connexion='CONNECTEE' data-commune="TOURCOING" data-adresse="PONT HYDRAULIQUE" data-typeCB='AVEC TPE' data-velodispo='7' data-espace='9' data-libelle='257' >
+							<td>Charles Wattinne</td>
+							<td>TOURCOING</td>
+							<td>7</td>
+							<td>9</td>
+						</tr>
+
+						<tr  data-lat='50.704693' data-lon='3.160515' data-nameStation="Mercure" data-etat='EN SERVICE' data-connexion='CONNECTEE' data-commune="TOURCOING" data-adresse="BOULEVARD GAMBETTA (FACE À LA STATION DE TAXI)" data-typeCB='SANS TPE' data-velodispo='8' data-espace='10' data-libelle='259' >
+							<td>Mercure</td>
+							<td>TOURCOING</td>
+							<td>8</td>
+							<td>10</td>
+						</tr>
+
+						<tr  data-lat='50.701187' data-lon='3.215011' data-nameStation="Wattrelos Place" data-etat='EN SERVICE' data-connexion='CONNECTEE' data-commune="WATTRELOS" data-adresse="2-10, D660" data-typeCB='AVEC TPE' data-velodispo='8' data-espace='10' data-libelle='262' >
+							<td>Wattrelos Place</td>
+							<td>WATTRELOS</td>
+							<td>8</td>
+							<td>10</td>
+						</tr>
+
+						<tr  data-lat='50.647236' data-lon='3.059376' data-nameStation="St Sebastien" data-etat='EN SERVICE' data-connexion='CONNECTEE' data-commune="LILLE" data-adresse="40 RUE SAINT SEBASTIEN" data-typeCB='AVEC TPE' data-velodispo='9' data-espace='11' data-libelle='29' >
+							<td>St Sebastien</td>
+							<td>LILLE</td>
+							<td>9</td>
+							<td>11</td>
+						</tr>
+
+						<tr  data-lat='50.62624' data-lon='3.039911' data-nameStation="Cormontaigne" data-etat='EN SERVICE' data-connexion='CONNECTEE' data-commune="LILLE" data-adresse="16 - 36 PLACE CORMONTAIGNE" data-typeCB='AVEC TPE' data-velodispo='4' data-espace='24' data-libelle='36' >
+							<td>Cormontaigne</td>
+							<td>LILLE</td>
+							<td>4</td>
+							<td>24</td>
+						</tr>
+
+						<tr  data-lat='50.62429' data-lon='3.045321' data-nameStation="Place Casquette" data-etat='EN SERVICE' data-connexion='CONNECTEE' data-commune="LILLE" data-adresse="1 RUE D'HAUBOURDIN" data-typeCB='SANS TPE' data-velodispo='10' data-espace='8' data-libelle='38' >
+							<td>Place Casquette</td>
+							<td>LILLE</td>
+							<td>10</td>
+							<td>8</td>
+						</tr>
+
+						<tr  data-lat='50.656487' data-lon='3.088004' data-nameStation="Buisson" data-etat='EN SERVICE' data-connexion='CONNECTEE' data-commune="LILLE" data-adresse="681 AVENUE DE LA REPUBLIQUE" data-typeCB='AVEC TPE' data-velodispo='14' data-espace='2' data-libelle='41' >
+							<td>Buisson</td>
+							<td>LILLE</td>
+							<td>14</td>
+							<td>2</td>
+						</tr>
+
+						<tr  data-lat='50.62629' data-lon='3.061198' data-nameStation="Artois" data-etat='EN SERVICE' data-connexion='CONNECTEE' data-commune="LILLE" data-adresse="12 RUE D'ARTOIS" data-typeCB='AVEC TPE' data-velodispo='6' data-espace='12' data-libelle='46' >
+							<td>Artois</td>
+							<td>LILLE</td>
+							<td>6</td>
+							<td>12</td>
+						</tr>
+
+						<tr  data-lat='50.62824' data-lon='3.069233' data-nameStation="Boulevard Louis XIV" data-etat='EN SERVICE' data-connexion='CONNECTEE' data-commune="LILLE" data-adresse="1 BOULEVARD JEAN BAPTISTE LEBAS" data-typeCB='AVEC TPE' data-velodispo='16' data-espace='8' data-libelle='47' >
+							<td>Boulevard Louis XIV</td>
+							<td>LILLE</td>
+							<td>16</td>
+							<td>8</td>
+						</tr>
+
+						<tr  data-lat='50.63156' data-lon='3.054738' data-nameStation="Massena" data-etat='EN SERVICE' data-connexion='CONNECTEE' data-commune="LILLE" data-adresse="73 RUE MASSENA" data-typeCB='AVEC TPE' data-velodispo='10' data-espace='22' data-libelle='5' >
+							<td>Massena</td>
+							<td>LILLE</td>
+							<td>10</td>
+							<td>22</td>
+						</tr>
+
+						<tr  data-lat='50.617847' data-lon='3.061758' data-nameStation="Porte d'Arras" data-etat='EN SERVICE' data-connexion='CONNECTEE' data-commune="LILLE" data-adresse="3 PLACE JACQUES FEBVRIER" data-typeCB='AVEC TPE' data-velodispo='18' data-espace='6' data-libelle='55' >
+							<td>Porte d'Arras</td>
+							<td>LILLE</td>
+							<td>18</td>
+							<td>6</td>
+						</tr>
+
+						<tr  data-lat='50.622223' data-lon='3.077127' data-nameStation="Belfort" data-etat='EN SERVICE' data-connexion='CONNECTEE' data-commune="LILLE" data-adresse="84 RUE DE TREVISE" data-typeCB='SANS TPE' data-velodispo='2' data-espace='28' data-libelle='59' >
+							<td>Belfort</td>
+							<td>LILLE</td>
+							<td>2</td>
+							<td>28</td>
+						</tr>
+
+						<tr  data-lat='50.629738' data-lon='3.078224' data-nameStation="Hotel de Region" data-etat='EN SERVICE' data-connexion='CONNECTEE' data-commune="LILLE" data-adresse="BOULEVARD DU PRESIDENT HOOVER" data-typeCB='AVEC TPE' data-velodispo='5' data-espace='27' data-libelle='63' >
+							<td>Hotel de Region</td>
+							<td>LILLE</td>
+							<td>5</td>
+							<td>27</td>
+						</tr>
+
+						<tr  data-lat='50.630836' data-lon='3.047778' data-nameStation="Nationale Rue du Port" data-etat='EN SERVICE' data-connexion='CONNECTEE' data-commune="LILLE" data-adresse="244 - 254 RUE NATIONALE" data-typeCB='SANS TPE' data-velodispo='8' data-espace='16' data-libelle='68' >
+							<td>Nationale Rue du Port</td>
+							<td>LILLE</td>
+							<td>8</td>
+							<td>16</td>
+						</tr>
+
+						<tr  data-lat='50.632996' data-lon='3.089651' data-nameStation="Fives" data-etat='EN SERVICE' data-connexion='CONNECTEE' data-commune="LILLE" data-adresse="123 RUE PIERRE LEGRAND" data-typeCB='AVEC TPE' data-velodispo='18' data-espace='6' data-libelle='76' >
+							<td>Fives</td>
+							<td>LILLE</td>
+							<td>18</td>
+							<td>6</td>
+						</tr>
+
+						<tr  data-lat='50.622963' data-lon='3.091363' data-nameStation="Mont de Terre" data-etat='EN SERVICE' data-connexion='CONNECTEE' data-commune="LILLE" data-adresse="7 RUE MATTEOTI" data-typeCB='SANS TPE' data-velodispo='11' data-espace='7' data-libelle='77' >
+							<td>Mont de Terre</td>
+							<td>LILLE</td>
+							<td>11</td>
+							<td>7</td>
+						</tr>
+
+						<tr  data-lat='50.63407' data-lon='3.02066' data-nameStation="EuraTechnologies" data-etat='EN SERVICE' data-connexion='CONNECTEE' data-commune="LILLE" data-adresse="AVENUE DE BRETAGNE (DEVANT L'ENTREE D'EURATECHNOLOGIE)" data-typeCB='AVEC TPE' data-velodispo='13' data-espace='11' data-libelle='83' >
+							<td>EuraTechnologies</td>
+							<td>LILLE</td>
+							<td>13</td>
+							<td>11</td>
+						</tr>
+
+						<tr  data-lat='50.628742' data-lon='3.104017' data-nameStation="Roger Salengro" data-etat='EN SERVICE' data-connexion='CONNECTEE' data-commune="LILLE HELLEMMES" data-adresse="68 RUE ROGER SALENGRO" data-typeCB='SANS TPE' data-velodispo='7' data-espace='5' data-libelle='86' >
+							<td>Roger Salengro</td>
+							<td>LILLE HELLEMMES</td>
+							<td>7</td>
+							<td>5</td>
+						</tr>
+
+						<tr  data-lat='50.645107' data-lon='3.086049' data-nameStation="Louviere" data-etat='EN SERVICE' data-connexion='CONNECTEE' data-commune="LILLE" data-adresse="1 RUE DU DIEU DE MARCQ" data-typeCB='AVEC TPE' data-velodispo='6' data-espace='14' data-libelle='90' >
+							<td>Louviere</td>
+							<td>LILLE</td>
+							<td>6</td>
+							<td>14</td>
+						</tr>
+
+						<tr  data-lat='50.64543' data-lon='3.075116' data-nameStation="Romarin" data-etat='EN SERVICE' data-connexion='CONNECTEE' data-commune="LA MADELEINE" data-adresse="ALLEE VICTOR BASCH" data-typeCB='AVEC TPE' data-velodispo='7' data-espace='11' data-libelle='96' >
+							<td>Romarin</td>
+							<td>LA MADELEINE</td>
+							<td>7</td>
+							<td>11</td>
+						</tr>
+
+						<tr  data-lat='50.654602' data-lon='3.073805' data-nameStation="La Madeleine Mairie" data-etat='EN SERVICE' data-connexion='CONNECTEE' data-commune="LA MADELEINE" data-adresse="RUE DU GENERAL DE GAULLE" data-typeCB='AVEC TPE' data-velodispo='3' data-espace='21' data-libelle='99' >
+							<td>La Madeleine Mairie</td>
+							<td>LA MADELEINE</td>
+							<td>3</td>
+							<td>21</td>
+						</tr>
+
+						<tr  data-lat='50.642418' data-lon='3.110835' data-nameStation="Mairie de Mons" data-etat='EN SERVICE' data-connexion='CONNECTEE' data-commune="MONS EN BAROEUL" data-adresse="AVENUE ROBERT SCHUMAN" data-typeCB='AVEC TPE' data-velodispo='10' data-espace='6' data-libelle='102' >
+							<td>Mairie de Mons</td>
+							<td>MONS EN BAROEUL</td>
+							<td>10</td>
+							<td>6</td>
+						</tr>
+
+						<tr  data-lat='50.626846' data-lon='3.115101' data-nameStation="Square Charles de Gaulle" data-etat='EN SERVICE' data-connexion='CONNECTEE' data-commune="HELLEMMES" data-adresse="4, RUE FERDINAND BUISSON" data-typeCB='SANS TPE' data-velodispo='9' data-espace='3' data-libelle='112' >
+							<td>Square Charles de Gaulle</td>
+							<td>HELLEMMES</td>
+							<td>9</td>
+							<td>3</td>
+						</tr>
+
+						<tr  data-lat='50.651497' data-lon='3.072316' data-nameStation="De Gaulle" data-etat='EN SERVICE' data-connexion='CONNECTEE' data-commune="LA MADELEINE" data-adresse="85, RUE DU GÉNÉRAL DE GAULLE" data-typeCB='SANS TPE' data-velodispo='15' data-espace='3' data-libelle='115' >
+							<td>De Gaulle</td>
+							<td>LA MADELEINE</td>
+							<td>15</td>
+							<td>3</td>
+						</tr>
+
+						<tr  data-lat='50.640957' data-lon='3.018803' data-nameStation="Lomme-Lambersart" data-etat='EN SERVICE' data-connexion='CONNECTEE' data-commune="LAMBERSART" data-adresse="390, AVENUE DE DUNKERQUE" data-typeCB='SANS TPE' data-velodispo='12' data-espace='6' data-libelle='119' >
+							<td>Lomme-Lambersart</td>
+							<td>LAMBERSART</td>
+							<td>12</td>
+							<td>6</td>
+						</tr>
+
+						<tr  data-lat='50.643883' data-lon='3.118579' data-nameStation="Fort de Mons" data-etat='EN SERVICE' data-connexion='CONNECTEE' data-commune="MONS EN BAROEUL" data-adresse="12, RUE DE NORMANDIE" data-typeCB='SANS TPE' data-velodispo='4' data-espace='16' data-libelle='125' >
+							<td>Fort de Mons</td>
+							<td>MONS EN BAROEUL</td>
+							<td>4</td>
+							<td>16</td>
+						</tr>
+
+						<tr  data-lat='50.6221' data-lon='3.131706' data-nameStation="Rue des Victoires" data-etat='EN SERVICE' data-connexion='CONNECTEE' data-commune="VILLENEUVE D'ASCQ" data-adresse="76, BOULEVARD VAN GOGH" data-typeCB='SANS TPE' data-velodispo='6' data-espace='10' data-libelle='134' >
+							<td>Rue des Victoires</td>
+							<td>VILLENEUVE D'ASCQ</td>
+							<td>6</td>
+							<td>10</td>
+						</tr>
+
+						<tr  data-lat='50.61776' data-lon='3.146026' data-nameStation="Rond Point de Tournai" data-etat='EN SERVICE' data-connexion='CONNECTEE' data-commune="VILLENEUVE D'ASCQ" data-adresse="55, RUE DES FUSILLÉS" data-typeCB='SANS TPE' data-velodispo='11' data-espace='5' data-libelle='143' >
+							<td>Rond Point de Tournai</td>
+							<td>VILLENEUVE D'ASCQ</td>
+							<td>11</td>
+							<td>5</td>
+						</tr>
+
+						<tr  data-lat='50.6258' data-lon='3.14862' data-nameStation="Annappes Republique" data-etat='EN SERVICE' data-connexion='CONNECTEE' data-commune="VILLENEUVE D'ASCQ" data-adresse="FACE AU 1 BIS RUE DE LA STATION" data-typeCB='AVEC TPE' data-velodispo='22' data-espace='2' data-libelle='144' >
+							<td>Annappes Republique</td>
+							<td>VILLENEUVE D'ASCQ</td>
+							<td>22</td>
+							<td>2</td>
+						</tr>
+
+						<tr  data-lat='50.61992' data-lon='3.14528' data-nameStation="Residence" data-etat='EN SERVICE' data-connexion='CONNECTEE' data-commune="VILLENEUVE D'ASCQ" data-adresse="PLACE N. DAME DE LA NATIVITÉ" data-typeCB='SANS TPE' data-velodispo='0' data-espace='0' data-libelle='145' >
+							<td>Residence</td>
+							<td>VILLENEUVE D'ASCQ</td>
+							<td>0</td>
+							<td>0</td>
+						</tr>
+
+						<tr  data-lat='50.63268' data-lon='3.052483' data-nameStation="Solferino Nationale" data-etat='EN SERVICE' data-connexion='CONNECTEE' data-commune="LILLE" data-adresse="FACE 171 RUE NATIONALE" data-typeCB='AVEC TPE' data-velodispo='9' data-espace='10' data-libelle='146' >
+							<td>Solferino Nationale</td>
+							<td>LILLE</td>
+							<td>9</td>
+							<td>10</td>
+						</tr>
+
+						<tr  data-lat='50.612194' data-lon='3.074952' data-nameStation="P.I. de Douai" data-etat='EN SERVICE' data-connexion='CONNECTEE' data-commune="LILLE" data-adresse="RUE DU FAUBOURG DE DOUAI SOUS LE PONT" data-typeCB='SANS TPE' data-velodispo='12' data-espace='8' data-libelle='148' >
+							<td>P.I. de Douai</td>
+							<td>LILLE</td>
+							<td>12</td>
+							<td>8</td>
+						</tr>
+
+						<tr  data-lat='50.609592' data-lon='3.075483' data-nameStation="Jean Jaures" data-etat='EN SERVICE' data-connexion='CONNECTEE' data-commune="RONCHIN" data-adresse="FACE AU 780 AVENUE JEAN JAURES" data-typeCB='AVEC TPE' data-velodispo='9' data-espace='8' data-libelle='149' >
+							<td>Jean Jaures</td>
+							<td>RONCHIN</td>
+							<td>9</td>
+							<td>8</td>
+						</tr>
+
+						<tr  data-lat='50.6449' data-lon='3.050645' data-nameStation="Esplanade" data-etat='EN SERVICE' data-connexion='CONNECTEE' data-commune="LILLE" data-adresse="PONT DU PETIT PARADIS" data-typeCB='AVEC TPE' data-velodispo='12' data-espace='12' data-libelle='15' >
+							<td>Esplanade</td>
+							<td>LILLE</td>
+							<td>12</td>
+							<td>12</td>
+						</tr>
+
+						<tr  data-lat='50.60642' data-lon='3.072209' data-nameStation="Ch. des Margueritois" data-etat='EN SERVICE' data-connexion='CONNECTEE' data-commune="RONCHIN" data-adresse="FACE AU 152 CHEMIN MARGUERITOIS" data-typeCB='SANS TPE' data-velodispo='6' data-espace='7' data-libelle='151' >
+							<td>Ch. des Margueritois</td>
+							<td>RONCHIN</td>
+							<td>6</td>
+							<td>7</td>
+						</tr>
+
+						<tr  data-lat='50.677914' data-lon='3.162353' data-nameStation="Parc Barbieux" data-etat='EN SERVICE' data-connexion='CONNECTEE' data-commune="ROUBAIX" data-adresse="AVENUE JEAN JAURES" data-typeCB='SANS TPE' data-velodispo='14' data-espace='9' data-libelle='202' >
+							<td>Parc Barbieux</td>
+							<td>ROUBAIX</td>
+							<td>14</td>
+							<td>9</td>
+						</tr>
+
+						<tr  data-lat='50.69138' data-lon='3.17966' data-nameStation="Euroteleport" data-etat='EN SERVICE' data-connexion='CONNECTEE' data-commune="ROUBAIX" data-adresse="78-84, BOULEVARD DU GÉNÉRAL LECLERC" data-typeCB='AVEC TPE' data-velodispo='20' data-espace='10' data-libelle='207' >
+							<td>Euroteleport</td>
+							<td>ROUBAIX</td>
+							<td>20</td>
+							<td>10</td>
+						</tr>
+
+						<tr  data-lat='50.676884' data-lon='3.187817' data-nameStation="Linne" data-etat='EN SERVICE' data-connexion='CONNECTEE' data-commune="ROUBAIX" data-adresse="192, AVENUE DE LINNÉ" data-typeCB='SANS TPE' data-velodispo='6' data-espace='6' data-libelle='210' >
+							<td>Linne</td>
+							<td>ROUBAIX</td>
+							<td>6</td>
+							<td>6</td>
+						</tr>
+
+						<tr  data-lat='50.695477' data-lon='3.164222' data-nameStation="Gare Jean Lebas" data-etat='EN SERVICE' data-connexion='CONNECTEE' data-commune="ROUBAIX" data-adresse="PLACE DE LA GARE" data-typeCB='AVEC TPE' data-velodispo='8' data-espace='9' data-libelle='219' >
+							<td>Gare Jean Lebas</td>
+							<td>ROUBAIX</td>
+							<td>8</td>
+							<td>9</td>
+						</tr>
+
+						<tr  data-lat='50.694714' data-lon='3.192643' data-nameStation="Chaptal" data-etat='EN SERVICE' data-connexion='CONNECTEE' data-commune="ROUBAIX" data-adresse="3, RUE D'AVELGHEM" data-typeCB='SANS TPE' data-velodispo='6' data-espace='6' data-libelle='236' >
+							<td>Chaptal</td>
+							<td>ROUBAIX</td>
+							<td>6</td>
+							<td>6</td>
+						</tr>
+
+						<tr  data-lat='50.730278' data-lon='3.167521' data-nameStation="Bvrd de l Egalite" data-etat='EN SERVICE' data-connexion='CONNECTEE' data-commune="TOURCOING" data-adresse="SECTEUR BVLD EGALITE" data-typeCB='SANS TPE' data-velodispo='8' data-espace='6' data-libelle='239' >
+							<td>Bvrd de l Egalite</td>
+							<td>TOURCOING</td>
+							<td>8</td>
+							<td>6</td>
+						</tr>
+
+						<tr  data-lat='50.635014' data-lon='3.064802' data-nameStation="Tanneurs" data-etat='EN SERVICE' data-connexion='CONNECTEE' data-commune="LILLE" data-adresse="2 - 10 RUE DES TANNEURS" data-typeCB='AVEC TPE' data-velodispo='28' data-espace='8' data-libelle='27' >
+							<td>Tanneurs</td>
+							<td>LILLE</td>
+							<td>28</td>
+							<td>8</td>
+						</tr>
+
+						<tr  data-lat='50.64306' data-lon='3.067452' data-nameStation="Rue de Gand" data-etat='EN SERVICE' data-connexion='CONNECTEE' data-commune="LILLE" data-adresse="8 PLACE DE GAND" data-typeCB='AVEC TPE' data-velodispo='0' data-espace='20' data-libelle='30' >
+							<td>Rue de Gand</td>
+							<td>LILLE</td>
+							<td>0</td>
+							<td>20</td>
+						</tr>
+
+						<tr  data-lat='50.644264' data-lon='3.062935' data-nameStation="Pont Neuf" data-etat='EN SERVICE' data-connexion='DECONNECTEE' data-commune="LILLE" data-adresse="38 BIS RUE DU PONT NEUF" data-typeCB='SANS TPE' data-velodispo='3' data-espace='17' data-libelle='31' >
+							<td>Pont Neuf</td>
+							<td>LILLE</td>
+							<td>3</td>
+							<td>17</td>
+						</tr>
+
+						<tr  data-lat='50.624695' data-lon='3.048961' data-nameStation="Maison Folie Wazemmes" data-etat='EN SERVICE' data-connexion='CONNECTEE' data-commune="LILLE" data-adresse="28 RUE DE L'HOPITAL SAINT ROCH" data-typeCB='SANS TPE' data-velodispo='10' data-espace='10' data-libelle='4' >
+							<td>Maison Folie Wazemmes</td>
+							<td>LILLE</td>
+							<td>10</td>
+							<td>10</td>
+						</tr>
+
+						<tr  data-lat='50.629063' data-lon='3.053711' data-nameStation="Gambetta Utrecht" data-etat='EN SERVICE' data-connexion='CONNECTEE' data-commune="LILLE" data-adresse="199 RUE LEON GAMBETTA" data-typeCB='SANS TPE' data-velodispo='9' data-espace='9' data-libelle='44' >
+							<td>Gambetta Utrecht</td>
+							<td>LILLE</td>
+							<td>9</td>
+							<td>9</td>
+						</tr>
+
+						<tr  data-lat='50.62648' data-lon='3.056666' data-nameStation="Brule Maison" data-etat='EN SERVICE' data-connexion='CONNECTEE' data-commune="LILLE" data-adresse="51 RUE DES POSTES" data-typeCB='SANS TPE' data-velodispo='1' data-espace='17' data-libelle='45' >
+							<td>Brule Maison</td>
+							<td>LILLE</td>
+							<td>1</td>
+							<td>17</td>
+						</tr>
+
+						<tr  data-lat='50.620304' data-lon='3.055471' data-nameStation="Bd Victor Hugo" data-etat='EN SERVICE' data-connexion='CONNECTEE' data-commune="LILLE" data-adresse="214 BOULEVARD VICTOR HUGO" data-typeCB='AVEC TPE' data-velodispo='14' data-espace='4' data-libelle='56' >
+							<td>Bd Victor Hugo</td>
+							<td>LILLE</td>
+							<td>14</td>
+							<td>4</td>
+						</tr>
+
+						<tr  data-lat='50.630943' data-lon='3.060299' data-nameStation="Republique Beaux Arts" data-etat='EN SERVICE' data-connexion='CONNECTEE' data-commune="LILLE" data-adresse="2 RUE INKERMAN" data-typeCB='AVEC TPE' data-velodispo='12' data-espace='11' data-libelle='6' >
+							<td>Republique Beaux Arts</td>
+							<td>LILLE</td>
+							<td>12</td>
+							<td>11</td>
+						</tr>
+
+						<tr  data-lat='50.621185' data-lon='3.072363' data-nameStation="Trevise" data-etat='EN SERVICE' data-connexion='CONNECTEE' data-commune="LILLE" data-adresse="114 RUE DE DOUAI" data-typeCB='SANS TPE' data-velodispo='13' data-espace='7' data-libelle='60' >
+							<td>Trevise</td>
+							<td>LILLE</td>
+							<td>13</td>
+							<td>7</td>
+						</tr>
+
+						<tr  data-lat='50.621128' data-lon='3.035483' data-nameStation="Place Tacq" data-etat='EN SERVICE' data-connexion='CONNECTEE' data-commune="LILLE" data-adresse="70 RUE DE LOOS" data-typeCB='AVEC TPE' data-velodispo='15' data-espace='3' data-libelle='65' >
+							<td>Place Tacq</td>
+							<td>LILLE</td>
+							<td>15</td>
+							<td>3</td>
+						</tr>
+
+						<tr  data-lat='50.61893' data-lon='3.032539' data-nameStation="Chasseurs de Driant" data-etat='EN SERVICE' data-connexion='CONNECTEE' data-commune="LILLE" data-adresse="11 AVENUE VERHAEREN" data-typeCB='SANS TPE' data-velodispo='13' data-espace='8' data-libelle='69' >
+							<td>Chasseurs de Driant</td>
+							<td>LILLE</td>
+							<td>13</td>
+							<td>8</td>
+						</tr>
+
+						<tr  data-lat='50.63424' data-lon='3.073991' data-nameStation="Cite Administrative" data-etat='EN SERVICE' data-connexion='CONNECTEE' data-commune="LILLE" data-adresse="51 RUE DE TOURNAI" data-typeCB='SANS TPE' data-velodispo='5' data-espace='11' data-libelle='70' >
+							<td>Cite Administrative</td>
+							<td>LILLE</td>
+							<td>5</td>
+							<td>11</td>
+						</tr>
+
+						<tr  data-lat='50.637337' data-lon='3.084894' data-nameStation="Eugene Jacquet" data-etat='EN SERVICE' data-connexion='CONNECTEE' data-commune="LILLE" data-adresse="59 RUE EUGENE JACQUET" data-typeCB='AVEC TPE' data-velodispo='4' data-espace='17' data-libelle='75' >
+							<td>Eugene Jacquet</td>
+							<td>LILLE</td>
+							<td>4</td>
+							<td>17</td>
+						</tr>
+
+						<tr  data-lat='50.632366' data-lon='3.062313' data-nameStation="Place Richebe" data-etat='EN SERVICE' data-connexion='CONNECTEE' data-commune="LILLE" data-adresse="3 PLACE RICHEBE" data-typeCB='AVEC TPE' data-velodispo='31' data-espace='1' data-libelle='8' >
+							<td>Place Richebe</td>
+							<td>LILLE</td>
+							<td>31</td>
+							<td>1</td>
+						</tr>
+
+						<tr  data-lat='50.632393' data-lon='3.110669' data-nameStation="Jules Guesde" data-etat='EN SERVICE' data-connexion='CONNECTEE' data-commune="LILLE HELLEMMES" data-adresse="RUE ST ELOI" data-typeCB='AVEC TPE' data-velodispo='3' data-espace='9' data-libelle='87' >
+							<td>Jules Guesde</td>
+							<td>LILLE HELLEMMES</td>
+							<td>3</td>
+							<td>9</td>
+						</tr>
+
+						<tr  data-lat='50.63393' data-lon='3.044986' data-nameStation="Rue de Toul" data-etat='EN SERVICE' data-connexion='CONNECTEE' data-commune="LILLE" data-adresse="18 RUE DE TOUL" data-typeCB='SANS TPE' data-velodispo='12' data-espace='23' data-libelle='9' >
+							<td>Rue de Toul</td>
+							<td>LILLE</td>
+							<td>12</td>
+							<td>23</td>
+						</tr>
+
+						<tr  data-lat='50.63422' data-lon='3.096542' data-nameStation="Square des Meres" data-etat='EN SERVICE' data-connexion='CONNECTEE' data-commune="LILLE" data-adresse="95 RUE DE LANNOY" data-typeCB='SANS TPE' data-velodispo='17' data-espace='8' data-libelle='91' >
+							<td>Square des Meres</td>
+							<td>LILLE</td>
+							<td>17</td>
+							<td>8</td>
+						</tr>
+
+						<tr  data-lat='50.63579' data-lon='3.033977' data-nameStation="Marx Dormoy" data-etat='EN SERVICE' data-connexion='CONNECTEE' data-commune="LILLE" data-adresse="RUE DE BORDEAUX" data-typeCB='SANS TPE' data-velodispo='8' data-espace='16' data-libelle='94' >
+							<td>Marx Dormoy</td>
+							<td>LILLE</td>
+							<td>8</td>
+							<td>16</td>
+						</tr>
+
+					</tbody>
+
+			</table>
+
+	</nav>
+	
+	<section id= 'GrandeCarte'>
+		    <div id='carteVLille'></div>
+	
+	<section id='infoComplete'>
+	<div id='miniCarte'></div>
+	
+    
+		<p id='Informations'></p>
+	</section>
+	</section>
+	
+	</div>
+
+    </body>
+</html>
